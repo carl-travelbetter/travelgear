@@ -1,0 +1,38 @@
+gearCard {
+padding: 1rem;
+  margin: 1rem 0;
+  background-color: #c6cef7; /* optional: or keep your current color */
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  text-align: left;
+}
+
+.gearCard:hover {
+  transform: translateY(-3px);
+}
+
+.gearCard h3 {
+  margin-top: 0;
+  color: #004080;
+}
+
+.gearCard p {
+  margin: 0.5rem 0;
+}
+
+.searchButton {
+  background-color: #004080;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.searchButton:hover {
+  background-color: #0066cc;
+}
+
