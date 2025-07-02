@@ -14,19 +14,21 @@ function getGear()
 
   results = document.getElementById("results");
   const itemData = document.createElement("p");
-  itemData.textContent = "Length "+itemResults.length;
-  results.appendChild(itemData);
+ 
 
    itemResults.forEach(item => {
+    const gearCard = document.createElement("div");
+     gearCard.className = "gearCard";
     const asin = document.createElement("p");
     asin.textContent = item.ASIN;
-     results.appendChild(asin);
+     gearCard.appendChild(asin);
     const itemImage = document.createElement("img");
      itemImage.src = item.URL;
-     results.appendChild(itemImage);
+     gearCard.appendChild(itemImage);
      const buyItLink = document.createElement("a");
      buyItLink.href = item.DetailPageURL;
      buyItLink.textContent = "Buy It Now";
-     results.appendChild(buyItLink);
+     gearCard.appendChild(buyItLink);
+     results.appendChild(gearCard);
    });
 }
