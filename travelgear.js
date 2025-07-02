@@ -1,7 +1,4 @@
-function getGear()
-{
-  console.log("Get Gear...");
-  let itemResults = [];
+let itemResults = [];
   fetch('disneycases.json')
   .then(response => response.json())
   .then(data => {
@@ -9,6 +6,11 @@ function getGear()
     console.log("Disney Suitcase Loaded:", itemResults);
   })
   .catch(error => console.error("Error loading item data:", error));
+
+function getGear()
+{
+  console.log("Get Gear...");
+  
 
   results = document.getElementById("results");
   const itemData = document.createElement("p");
