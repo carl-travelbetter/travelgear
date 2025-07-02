@@ -10,5 +10,8 @@ function getGear()
   })
   .catch(error => console.error("Error loading item data:", error));
 
-  console.log("Now what...");
+  results = document.getElementById("results");
+  const itemData = document.createElement("p");
+  itemData.textContent = "Hello World";
+  results.appendChild(itemData);
 }
