@@ -21,5 +21,9 @@ function getGear()
     const asin = document.createElement("p");
     asin.textContent = item.ASIN;
      results.appendChild(asin);
+    const itemImage = document.createElement("img");
+     itemImage.src = item.image;
+     results.appendChile(itemImage);
+     
    });
 }
