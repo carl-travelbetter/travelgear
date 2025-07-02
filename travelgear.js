@@ -21,4 +21,5 @@ function getGear()
     const asin = document.createElement("p");
     asin.textContent = item.ASIN;
      results.appendChild(asin);
+   });
 }
