@@ -14,6 +14,6 @@ function getGear()
 
   results = document.getElementById("results");
   const itemData = document.createElement("p");
-  itemData.textContent = "Hello World";
+  itemData.textContent = "Length "+itemResults.length;
   results.appendChild(itemData);
 }
