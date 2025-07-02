@@ -24,6 +24,8 @@ function getGear()
     const itemImage = document.createElement("img");
      itemImage.src = item.URL;
      results.appendChild(itemImage);
-     
+     const buyItLink = document.createElement("a");
+     buyItLink.href = item.DetailPageURL;
+     results.appendChild(buyItLink);
    });
 }
