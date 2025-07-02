@@ -9,4 +9,6 @@ function getGear()
     console.log("Disney Suitcase Loaded:", itemResults);
   })
   .catch(error => console.error("Error loading item data:", error));
+
+  console.log("Now what...");
 }
