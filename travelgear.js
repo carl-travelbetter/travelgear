@@ -26,6 +26,7 @@ function getGear()
      results.appendChild(itemImage);
      const buyItLink = document.createElement("a");
      buyItLink.href = item.DetailPageURL;
+     buyItLink.textContent = "Buy It Now";
      results.appendChild(buyItLink);
    });
 }
