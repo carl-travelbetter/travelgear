@@ -16,4 +16,9 @@ function getGear()
   const itemData = document.createElement("p");
   itemData.textContent = "Length "+itemResults.length;
   results.appendChild(itemData);
+
+   itemResults.forEach(item => {
+    const asin = document.createElement("p");
+    asin.textContent = item.ASIN;
+     results.appendChild(asin);
 }
