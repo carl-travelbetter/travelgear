@@ -1,47 +1,9 @@
-{
- "ItemsResult": {
-  "Items": [
+[
    {
     "ASIN": "B0C789F735",
     "DetailPageURL": "https://www.amazon.co.uk/dp/B0C789F735?tag=travelbette0d-21&linkCode=ogi&th=1&psc=1",
-    "Images": {
-     "Primary": {
-      "Large": {
        "Height": 500,
        "URL": "https://m.media-amazon.com/images/I/41eGyBBn54L._SL500_.jpg",
        "Width": 333
       }
-     }
-    },
-    "ItemInfo": {
-     "ByLineInfo": {
-      "Brand": {
-       "DisplayValue": "American Tourister",
-       "Label": "Brand",
-       "Locale": "en_GB"
-      }
-     }
-    },
-    "Offers": {
-     "Listings": [
-      {
-       "Id": "k4Al8QcJQYrVrk8lfavqVr5uc7peHr5r4m%2BnG60NL8VKKneyAA4DU6kC%2BN2OWKAEgK7ROkX1N85FRh0z4Cp8lNTqEC26%2BJStUVedEiJUuIzNb07%2BZb3bHBvALOBtWXsp",
-       "Price": {
-        "Amount": 76.99,
-        "Currency": "GBP",
-        "DisplayAmount": "£76.99",
-        "Savings": {
-         "Amount": 48.01,
-         "Currency": "GBP",
-         "DisplayAmount": "£48.01 (38%)",
-         "Percentage": 38
-        }
-       },
-       "ViolatesMAP": false
-      }
-     ]
-    }
-   }
   ]
- }
-}
