@@ -22,7 +22,7 @@ function getGear()
     asin.textContent = item.ASIN;
      results.appendChild(asin);
     const itemImage = document.createElement("img");
-     itemImage.src = item.image;
+     itemImage.src = item.URL;
      results.appendChile(itemImage);
      
    });
