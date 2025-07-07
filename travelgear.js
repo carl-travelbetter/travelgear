@@ -16,19 +16,19 @@ function getGear()
   const itemData = document.createElement("p");
  
 
-   itemResults.forEach(item => {
+   itemResults.ItemsResult.Items.forEach(item => {
     const gearCard = document.createElement("div");
      gearCard.className = "gearCard";
     const asin = document.createElement("p");
     asin.textContent = item.ASIN;
      gearCard.appendChild(asin);
-    const itemImage = document.createElement("img");
-     itemImage.src = item.URL;
-     gearCard.appendChild(itemImage);
-     const buyItLink = document.createElement("a");
-     buyItLink.href = item.DetailPageURL;
-     buyItLink.textContent = "Buy It Now";
-     gearCard.appendChild(buyItLink);
+  //  const itemImage = document.createElement("img");
+    // itemImage.src = item.URL;
+  //   gearCard.appendChild(itemImage);
+  //   const buyItLink = document.createElement("a");
+  //   buyItLink.href = item.DetailPageURL;
+   //  buyItLink.textContent = "Buy It Now";
+  //   gearCard.appendChild(buyItLink);
      results.appendChild(gearCard);
    });
 }
