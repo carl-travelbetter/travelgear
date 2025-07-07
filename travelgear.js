@@ -30,7 +30,7 @@ function getGear()
      buyItLink.textContent = "Buy It Now";
      gearCard.appendChild(buyItLink);
      const price = document.createElement("p");
-     price.textContent = item.Offers.Listings.Price.DisplayAmount;
+     price.textContent = item.Offers.Listings[0].Price.DisplayAmount;
      gearCard.appendChild(price);
      results.appendChild(gearCard);
    });
