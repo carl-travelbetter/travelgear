@@ -2,19 +2,6 @@
  "ItemsResult": {
   "Items": [
    {
-    "ASIN": "B07ZZDLKFJ",
-    "DetailPageURL": "https://www.amazon.co.uk/dp/B07ZZDLKFJ?tag=travelbette0d-21&linkCode=ogi&th=1&psc=1",
-    "Images": {
-     "Primary": {
-      "Large": {
-       "Height": 500,
-       "URL": "https://m.media-amazon.com/images/I/41cc+TD9xxL._SL500_.jpg",
-       "Width": 500
-      }
-     }
-    }
-   },
-   {
     "ASIN": "B07N8CFJYF",
     "DetailPageURL": "https://www.amazon.co.uk/dp/B07N8CFJYF?tag=travelbette0d-21&linkCode=ogi&th=1&psc=1",
     "Images": {
@@ -25,6 +12,45 @@
        "Width": 500
       }
      }
+    },
+    "Offers": {
+     "Listings": [
+      {
+       "Id": "z01pQYz1Mjna19lOgI8w4l1w0Xd22MZ5Wa08kP8ax2AYT6GbXgv7rjnLN2SBhUepmqEOVAIMfB6eXMuQ8okVzfah%2FUk5MOe%2FDN%2F5hRsTyS42X%2FySm4cHu3aCZRUrJyFk",
+       "Price": {
+        "Amount": 95.36,
+        "Currency": "GBP",
+        "DisplayAmount": "£95.36"
+       },
+       "ViolatesMAP": false
+      }
+     ]
+    }
+   },
+   {
+    "ASIN": "B07ZZDLKFJ",
+    "DetailPageURL": "https://www.amazon.co.uk/dp/B07ZZDLKFJ?tag=travelbette0d-21&linkCode=ogi&th=1&psc=1",
+    "Images": {
+     "Primary": {
+      "Large": {
+       "Height": 500,
+       "URL": "https://m.media-amazon.com/images/I/41cc+TD9xxL._SL500_.jpg",
+       "Width": 500
+      }
+     }
+    },
+    "Offers": {
+     "Listings": [
+      {
+       "Id": "z01pQYz1Mjna19lOgI8w4s%2F34zXHk4zrg2Cfa1WJdMTjD%2BRawyNPAntL5bvfaYMAASH1E%2F1DlWT2Z3WhN1OllUqCkU%2F8yFbOXrpMM3y5lWCeSCn0LSO4JXrEZyt0p4Tg",
+       "Price": {
+        "Amount": 92.07,
+        "Currency": "GBP",
+        "DisplayAmount": "£92.07"
+       },
+       "ViolatesMAP": false
+      }
+     ]
     }
    }
   ]
