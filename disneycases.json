@@ -1,9 +1,18 @@
-[
+{
+   items: 
+   {,
    {
     "ASIN": "B0C789F735",
     "DetailPageURL": "https://www.amazon.co.uk/dp/B0C789F735?tag=travelbette0d-21&linkCode=ogi&th=1&psc=1",
        "Height": 500,
        "URL": "https://m.media-amazon.com/images/I/41eGyBBn54L._SL500_.jpg",
        "Width": 333
-      }
-  ]
+    },
+    {
+       "ASIN": "B0C7899999",
+       "DetailPageURL": "https://www.amazon.co.uk/dp/B0C789F735?tag=travelbette0d-21&linkCode=ogi&th=1&psc=1",
+       "Height": 500,
+       "URL": "https://m.media-amazon.com/images/I/51eAR0NfiIL._AC_SX679_.jpg",
+       "Width": 333
+    }
+}
