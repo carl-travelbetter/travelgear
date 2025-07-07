@@ -22,9 +22,9 @@ function getGear()
     const asin = document.createElement("p");
     asin.textContent = item.ASIN;
      gearCard.appendChild(asin);
-  //  const itemImage = document.createElement("img");
-    // itemImage.src = item.URL;
-  //   gearCard.appendChild(itemImage);
+   const itemImage = document.createElement("img");
+       itemImage.src = item.Images.Primary.Large.URL;
+       gearCard.appendChild(itemImage);
   //   const buyItLink = document.createElement("a");
   //   buyItLink.href = item.DetailPageURL;
    //  buyItLink.textContent = "Buy It Now";
