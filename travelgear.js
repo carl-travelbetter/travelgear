@@ -25,10 +25,10 @@ function getGear()
    const itemImage = document.createElement("img");
        itemImage.src = item.Images.Primary.Large.URL;
        gearCard.appendChild(itemImage);
-  //   const buyItLink = document.createElement("a");
-  //   buyItLink.href = item.DetailPageURL;
-   //  buyItLink.textContent = "Buy It Now";
-  //   gearCard.appendChild(buyItLink);
+   const buyItLink = document.createElement("a");
+     buyItLink.href = item.DetailPageURL;
+     buyItLink.textContent = "Buy It Now";
+     gearCard.appendChild(buyItLink);
      results.appendChild(gearCard);
    });
 }
