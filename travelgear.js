@@ -29,6 +29,9 @@ function getGear()
      buyItLink.href = item.DetailPageURL;
      buyItLink.textContent = "Buy It Now";
      gearCard.appendChild(buyItLink);
+     const price = document.createElement("p");
+     price.textContent = item.Offers.Listings.Price.DisplayAmount;
+     gearCard.appendChild(price);
      results.appendChild(gearCard);
    });
 }
