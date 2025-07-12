@@ -55,6 +55,18 @@ function showFilters()
     filterButton.className = "filter-btn";
     filterButton.setAttribute("data-tag", filter.label);
     filterButton.innerHTML = `${filter.icon} ${filter.label}`;
+
+   //Make the button do something when clicked
+  filterButton.addEventListener("click", () => {
+      filterButton.classList.toggle("active");
+    
+     // activeTags = Array.from(document.querySelectorAll('.tag-btn.active'))
+       // .map(btn => btn.dataset.tag);
+    console.log(filter.label+" Filter Selected"); 
+      
+   });
+
+  
   filterTab.appendChild(filterButton);
  });
 }
