@@ -36,3 +36,17 @@ padding: 1rem;
   background-color: #0066cc;
 }
 
+.filter-btn {
+  background-color: #fff;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.filter-btn.active {
+  background-color: #0077cc;
+  color: #fff;
+  border-color: #0077cc;
+}
+
+
