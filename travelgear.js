@@ -4,6 +4,7 @@ let topThreeResults = [];
   .then(data => {
     topThreeResults = data;
     console.log("Top Three Results Loaded:", topThreeResults);
+    loadTopThreeResults();
   })
   .catch(error => console.error("Error loading item data:", error));
 
@@ -26,11 +27,11 @@ let additionalInfo = [];
  .catch(error => console.error("Error loading additional information file:", error));
 
 //Onload function to display the top three items
-document.addEventListener("DOMContentLoaded", () => {
+/*document.addEventListener("DOMContentLoaded", () => {
   console.log("On load function...");
   loadTopThreeResults();
 
-});
+});*/
 
 function loadTopThreeResults()
 {
