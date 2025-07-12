@@ -3,7 +3,7 @@ let topThreeResults = [];
   .then(response => response.json())
   .then(data => {
     topThreeResults = data;
-    console.log("Disney Suitcase Loaded:", topThreeResults);
+    console.log("Top Three Results Loaded:", topThreeResults);
   })
   .catch(error => console.error("Error loading item data:", error));
 
