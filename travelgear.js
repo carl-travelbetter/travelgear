@@ -53,7 +53,7 @@ function showFilters()
   console.log("Filter "+filter.label);
   const filterButton = document.createElement("button");
     filterButton.className = "filter-btn";
-    //filterButton.setAttribute("data-tag", tag.Id);
+    filterButton.setAttribute("data-tag", filter.label);
     filterButton.innerHTML = `${filter.icon} ${filter.label}`;
   filterTab.appendChild(filterButton);
  });
