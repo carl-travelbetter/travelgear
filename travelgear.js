@@ -7,6 +7,16 @@ let itemResults = [];
   })
   .catch(error => console.error("Error loading item data:", error));
 
+let additionalInfo = [];
+ fetch('gearextras.json')
+  .then(response => response.json())
+  .then(data => {
+    additionalInfo = data;
+    console.log("Additional Gear Data Loaded:"; additionalInfo);
+  })
+ .catch(error => console.error("Error loading additional information file:", error));
+
+
 function getGear()
 {
   console.log("Get Gear...");
