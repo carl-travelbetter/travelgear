@@ -49,6 +49,13 @@ function showFilters()
  const filterTitle = document.createElement("h2");
  filterTitle.textContent = "Search Filters";
  filterTab.appendChild(filterTitle);
+ filters.forEach(filter => {
+  console.log("Filter "+filter.label);
+  const filterOption = document.createElement("a");
+  filterOption.href = "";
+  filterOption.textContent = filter.label;
+  filterTab.appendChild(filterOption);
+ });
 }
 
 function loadTopThreeResults()
