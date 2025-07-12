@@ -3,24 +3,24 @@
     "label":"Under £100",
     "type":"price",
     "value":"100",
-    "icon":"X"
+    "icon":"£"
   },
   {
     "label":"Mickey Mouse",
     "type":"character",
     "value":"Mickey",
-    "icon":"X"
+    "icon":"C"
   },
   {
     "label":"Minnie Mouse",
     "type":"character",
     "value":"Minnie",
-    "icon":"X"
+    "icon":"C"
   },
   {
     "label":"Donald Duck",
     "type":"character",
     "value":"Donald",
-    "icon":"X"
+    "icon":"C"
   }
 ]
