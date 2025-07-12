@@ -12,7 +12,7 @@ let additionalInfo = [];
   .then(response => response.json())
   .then(data => {
     additionalInfo = data;
-    console.log("Additional Gear Data Loaded:"; additionalInfo);
+    console.log("Additional Gear Data Loaded:", additionalInfo);
   })
  .catch(error => console.error("Error loading additional information file:", error));
 
