@@ -35,6 +35,50 @@ document.addEventListener("DOMContentLoaded", () => {
 function loadTopThreeResults()
 {
   console.log("Load Top Three Results...");
+  results = document.getElementByID("results");
+  results.innerHTML = "";
+
+  topThreeResults.ItemsResult.Items.forEach(item => {
+    const gearCard = document.createElement("div");
+     gearCard.className = "gearCard";
+    const asin = document.createElement("p");
+    asin.textContent = item.ASIN;
+     gearCard.appendChild(asin);
+   const itemImage = document.createElement("img");
+       itemImage.src = item.Images.Primary.Large.URL;
+       gearCard.appendChild(itemImage);
+   const buyItLink = document.createElement("a");
+     buyItLink.href = item.DetailPageURL;
+     buyItLink.textContent = "Buy It Now";
+     gearCard.appendChild(buyItLink);
+     const price = document.createElement("p");
+     price.textContent = item.Offers.Listings[0].Price.DisplayAmount;
+     gearCard.appendChild(price);
+  
+     //Add additional information, if found
+     additionalInfo.forEach(entry => {
+       const asinLookup = entry.ASIN;
+       console.log("Additional ASIN Lookup "+asinLookup);
+       if (asinLookup == item.ASIN)
+       {
+         console.log("***Match Found***");
+         const infoHeader = document.createElement("h2");
+         infoHeader.textContent = "Additional Information";
+         gearCard.appendChild(infoHeader);
+         const notes = document.createElement("p");
+         notes.textContent = entry.notes;
+         gearCard.appendChild(notes);
+       }
+       else
+       {
+         console.log("No Match Found");
+       }
+       
+     });
+     
+     results.appendChild(gearCard);
+   });
+ 
 }
 
 
