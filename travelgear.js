@@ -54,7 +54,7 @@ function getGear()
          infoHeader.textContent = "Additional Information";
          gearCard.appendChild(infoHeader);
          const notes = document.createElement("p");
-         notes = entry.notes;
+         notes.textContent = entry.notes;
          gearCard.appendChild(notes);
        }
        else
