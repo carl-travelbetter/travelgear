@@ -48,7 +48,7 @@ padding: 1rem;
   background-color: #fff;
   border: 1px solid #bbb;
   border-radius: 6px;
-  padding: 0.5rem 1rem;
+  padding: 5px 5px;
   cursor: pointer;
 }
 .filter-btn.active {
