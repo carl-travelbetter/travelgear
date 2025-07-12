@@ -42,6 +42,22 @@ function getGear()
      const price = document.createElement("p");
      price.textContent = item.Offers.Listings[0].Price.DisplayAmount;
      gearCard.appendChild(price);
+  
+     //Add additional information, if found
+     additionalInfo.forEach(entry => {
+       const asinLookup = entry.ASIN;
+       console.log("Additional ASIN Lookup "+asinLookup);
+       if (asinLookup == item.ASIN)
+       {
+         console.log("***Match Found***");
+       }
+       else
+       {
+         console.log("No Match Found");
+       }
+       
+     });
+     
      results.appendChild(gearCard);
    });
 }
