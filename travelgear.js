@@ -26,12 +26,30 @@ let additionalInfo = [];
   })
  .catch(error => console.error("Error loading additional information file:", error));
 
+let filters = [];
+fetch('filters.json')
+ .then (response => response.json())
+ .then(data => {
+   filters = data;
+   console.log("Filters Loaded...", filters);
+ })
+ .catch(error => console.error("Error loading filters data:", error));
+
 //Onload function to display the top three items
 /*document.addEventListener("DOMContentLoaded", () => {
   console.log("On load function...");
   loadTopThreeResults();
 
 });*/
+
+function showFilters()
+{
+ console.log("Showing Filters...");
+ const filterTab = document.getElementById("filters");
+ const filterTitle = document.createElement("h2");
+ filterTitle.textContent = "Search Filters";
+ filterTab.appendChild(filterTitle);
+}
 
 function loadTopThreeResults()
 {
