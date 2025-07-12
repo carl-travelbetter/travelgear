@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function loadTopThreeResults()
 {
   console.log("Load Top Three Results...");
-  results = document.getElementByID("results");
+   results = document.getElementById("results");
   results.innerHTML = "";
 
   topThreeResults.ItemsResult.Items.forEach(item => {
@@ -43,11 +43,11 @@ function loadTopThreeResults()
      gearCard.className = "gearCard";
     const asin = document.createElement("p");
     asin.textContent = item.ASIN;
-     gearCard.appendChild(asin);
-   const itemImage = document.createElement("img");
+    gearCard.appendChild(asin);
+    const itemImage = document.createElement("img");
        itemImage.src = item.Images.Primary.Large.URL;
        gearCard.appendChild(itemImage);
-   const buyItLink = document.createElement("a");
+    const buyItLink = document.createElement("a");
      buyItLink.href = item.DetailPageURL;
      buyItLink.textContent = "Buy It Now";
      gearCard.appendChild(buyItLink);
