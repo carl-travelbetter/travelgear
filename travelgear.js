@@ -50,9 +50,9 @@ function getGear()
        if (asinLookup == item.ASIN)
        {
          console.log("***Match Found***");
-         const additionalInfoHeader = document.createElement("h2");
-         additionalInforHeader.textContent = "Additional Information";
-         gearCard.appendChild(additionalInforHeader);
+         const infoHeader = document.createElement("h2");
+         infoHeader.textContent = "Additional Information";
+         gearCard.appendChild(infoHeader);
          const notes = document.createElement("p");
          notes = entry.notes;
          gearCard.appendChild(notes);
