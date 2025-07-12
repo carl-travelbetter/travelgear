@@ -51,10 +51,11 @@ function showFilters()
  filterTab.appendChild(filterTitle);
  filters.forEach(filter => {
   console.log("Filter "+filter.label);
-  const filterOption = document.createElement("a");
-  filterOption.href = "";
-  filterOption.textContent = filter.label;
-  filterTab.appendChild(filterOption);
+  const filterButton = document.createElement("button");
+    filterButton.className = "filter-btn";
+    //filterButton.setAttribute("data-tag", tag.Id);
+    filterButton.innerHTML = `${filter.icon} ${filter.label}`;
+  filterTab.appendChild(filterButton);
  });
 }
 
