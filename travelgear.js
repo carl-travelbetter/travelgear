@@ -1,3 +1,12 @@
+let topThreeResults = [];
+ fetch('topthree.json')
+  .then(response => response.json())
+  .then(data => {
+    topThreeResults = data;
+    console.log("Disney Suitcase Loaded:", topThreeResults);
+  })
+  .catch(error => console.error("Error loading item data:", error));
+
 let itemResults = [];
   fetch('disneycases.json')
   .then(response => response.json())
@@ -16,6 +25,18 @@ let additionalInfo = [];
   })
  .catch(error => console.error("Error loading additional information file:", error));
 
+//Onload function to display the top three items
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("On load function...");
+  loadTopThreeResults();
+
+});
+
+function loadTopThreeResults()
+{
+  console.log("Load Top Three Results...");
+}
+
 
 function getGear()
 {
@@ -23,6 +44,7 @@ function getGear()
   
 
   results = document.getElementById("results");
+  results.innerHTML = "";
   const itemData = document.createElement("p");
  
 
