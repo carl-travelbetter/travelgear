@@ -106,9 +106,9 @@ function showFilters()
  filterTab.appendChild(materialFilters);
 
  const applyButton = document.getElementById("applyButton");
- applyButton.style.display = block;
+ applyButton.style.display = "block";
  const clearButton = document.getElementById("clearButton");
- clearButton.style.display = block;
+ clearButton.style.display = "block";
  
 }
 
@@ -121,7 +121,10 @@ function filterResults()
 function clearFilters()
 {
   console.log("clear Filters...");
-  
+  document.querySelectorAll('.filter-btn.active').forEach(btn => {
+        btn.classList.remove('active');
+        activeFilters = [];
+      }
 }
 
 
