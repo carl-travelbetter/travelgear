@@ -95,7 +95,7 @@ function showFilters()
   }
   if (filter.type == "material")
   {
-   materialFilers.appendChild(filterButton);
+   materialFilters.appendChild(filterButton);
   }
    
   
