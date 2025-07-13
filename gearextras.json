@@ -4,6 +4,7 @@
     "tbrating": 4,
     "characters": "mickey",
     "casetype": "cabin",
+    "pricefrom": 100,
     "notes": "Lovely design, very unique and available in a great range of sizes"
   },
   {
@@ -11,6 +12,7 @@
     "tbrating": 3,
     "characters": "minnie",
     "casetype": "hold",
+    "pricefrom": 100,
     "notes": "Lovely design, very unique and available in a great range of sizes"
   },
   {
@@ -18,6 +20,7 @@
     "tbrating": 3,
     "characters": "mickey",
     "casetype": "ride-on",
+    "pricefrom": 150,
     "notes": "No notes for this case"
   },
   {
@@ -25,6 +28,7 @@
     "tbrating": 3,
     "characters": "donald",
     "casetype": "hold",
+    "pricefrom": 200,
     "notes": "No notes for this case"
   },
   {
@@ -32,6 +36,7 @@
     "tbrating": 5,
     "characters": "mickey",
     "casetype": "kids",
+    "pricefrom": 100,
     "notes": "No notes for this case"
   }
 ]
