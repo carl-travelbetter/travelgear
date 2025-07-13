@@ -95,7 +95,7 @@ function loadTopThreeResults()
      //buyItLink.textContent = "Buy It Now";
      const buyItButton = document.createElement("button");
      buyItButton.className = "buyit-button";
-     buyItButton.textContent = "Buy It";
+     buyItButton.textContent = "Buy It Now";
      buyItLink.appendChild(buyItButton);
      gearCard.appendChild(buyItLink);
      const price = document.createElement("p");
@@ -154,7 +154,10 @@ function getGear()
        gearCard.appendChild(itemImage);
    const buyItLink = document.createElement("a");
      buyItLink.href = item.DetailPageURL;
-     buyItLink.textContent = "Buy It Now";
+     const buyItButton = document.createElement("button");
+     buyItButton.className = "buyit-button";
+     buyItButton.textContent = "Buy It Now";
+     buyItLink.appendChild(buyItButton);
      gearCard.appendChild(buyItLink);
      const price = document.createElement("p");
      price.textContent = item.Offers.Listings[0].Price.DisplayAmount;
