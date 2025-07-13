@@ -96,6 +96,7 @@ body {
 
 .buyit-button:hover {
     background-color: #f5af0c;
+    font-size:18px;
     color:black;
 }
       
