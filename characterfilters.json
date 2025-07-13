@@ -1,1 +1,17 @@
-
+[
+  {
+    "id":"mickey",
+    "label":"Mickey Mouse",
+    "icon":"C"
+  },
+  {
+    "id":"minnie",
+    "label":"Minnie Mouse",
+    "icon":"C"
+  },
+  {
+    "id":"donald",
+    "label":"Donald Duck",
+    "icon":"C"
+  }
+]
