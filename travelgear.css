@@ -93,6 +93,11 @@ body {
     border-radius: 12px;
     color:black;
 }
+
+.buyit-button:hover {
+    background-color: #f5af0c;
+    color:black;
+}
       
 
 
