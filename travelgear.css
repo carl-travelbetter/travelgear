@@ -68,6 +68,7 @@ body {
   margin-right: auto;
   width: 60vw;
   max-width: 300px;
+  border-radius: 12px;
 }
 
 .product-info {
