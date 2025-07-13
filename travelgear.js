@@ -1,3 +1,6 @@
+//Active filters
+let activeFilters = [];
+
 let topThreeResults = [];
  fetch('topthree.json')
   .then(response => response.json())
@@ -68,16 +71,17 @@ function showFilters()
   console.log("Filter "+filter.label);
   const filterButton = document.createElement("button");
     filterButton.className = "filter-btn";
-    filterButton.setAttribute("data-tag", filter.label);
+    filterButton.setAttribute("data-label", filter.label);
     filterButton.innerHTML = `${filter.label}`;
 
    //Make the button do something when clicked
   filterButton.addEventListener("click", () => {
       filterButton.classList.toggle("active");
     
-     // activeTags = Array.from(document.querySelectorAll('.filter-btn.active'))
-       // .map(btn => btn.dataset.tag);
+     activeFilters = Array.from(document.querySelectorAll('.filter-btn.active'))
+        .map(btn => btn.dataset.label);
     console.log(filter.label+" Filter Selected"); 
+    console.log("Filter list "+activeFilters.length);
       
    });
   if (filter.type == "price")
