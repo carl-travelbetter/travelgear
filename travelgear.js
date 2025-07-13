@@ -38,6 +38,33 @@ fetch('filters.json')
  })
  .catch(error => console.error("Error loading filters data:", error));
 
+let characterFilters = [];
+fetch('characterfilters.json')
+ .then (response => response.json())
+ .then(data => {
+  charactersFilters = data;
+  console.log("Character Filters Loaded...", characterFilters);
+ })
+ .catch(error => console.error("Error loading character filters:",error));
+
+let priceFilters = [];
+fetch('pricefilters.json')
+.then(reponse => response.json())
+.then(data => {
+ priceFilters = data;
+ console.log("Price Filters Loaded...",priceFilters);
+})
+.catch(error => console.error("Error loading price filters:",error));
+
+let casetypeFilters = [];
+fetch('casetype.json')
+.then(response => response.json())
+.then(data => {
+ casetypeFilters = data;
+ console.log("Case Type Filters Loaded...",casetypeFllters);
+})
+.catch(error => console.error("Error loading type filters:",error));
+
 
 //Show the filter options and assign listeners
 function showFilters()
