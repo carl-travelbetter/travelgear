@@ -124,7 +124,7 @@ function clearFilters()
   document.querySelectorAll('.filter-btn.active').forEach(btn => {
         btn.classList.remove('active');
         activeFilters = [];
-      }
+      });
 }
 
 
