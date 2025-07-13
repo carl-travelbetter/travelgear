@@ -108,7 +108,7 @@ function loadTopThreeResults()
          console.log("***Match Found***");
          const infoHeader = document.createElement("h2");
          infoHeader.textContent = "Additional Information";
-         infoHeader..className = "product-info";
+         infoHeader.className = "product-info";
          gearCard.appendChild(infoHeader);
          const notes = document.createElement("p");
          notes.className = "product-info";
