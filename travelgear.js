@@ -92,7 +92,11 @@ function loadTopThreeResults()
     const buyItLink = document.createElement("a");
      buyItLink.className = "product-info";
      buyItLink.href = item.DetailPageURL;
-     buyItLink.textContent = "Buy It Now";
+     //buyItLink.textContent = "Buy It Now";
+     const buyItButton = document.createElement("button");
+     buyItButton.className = "buyit-button";
+     buyItButton.textContent = "Buy It";
+     buyItLink.appendChild(buyItButton);
      gearCard.appendChild(buyItLink);
      const price = document.createElement("p");
      price.className = "product-info";
