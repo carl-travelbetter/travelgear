@@ -10,7 +10,12 @@
   <button class="searchButton" onclick="loadTopThreeResults()">Top Three Suitcases</button>
   <button class="searchButton" onclick="getGear()">Show All Suitcases</button>
   <button class="searchButton" onclick="showFilters()">Filter Options</button>
-  <div id="filters"></div>
+  <div id="filters">
+  </div>
+  <div id="controls">
+    <button hidden class="searchButton" onclick="filterResults()">Apply</button>
+    <button hidden class="searchButton" onclick="clearResults()">Clear</button>
+  </div>
   <div id="results"></div>
   
 </body>
