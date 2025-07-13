@@ -84,7 +84,8 @@ body {
 .buyit-button {
     display:block;
     margin-top:1.5rem;
-    max-width:100px;
+    width:50vw;
+    max-width:200px;
     margin-left:auto;
     margin-right:auto;
     background-color: #f5b942;
