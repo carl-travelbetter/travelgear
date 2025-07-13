@@ -2,11 +2,31 @@
   {
     "ASIN":"B07N8CFJYF",
     "tbrating": 4,
+    "characters": "Mickey",
+    "notes": "Lovely design, very unique and available in a great range of sizes"
+  },
+  {
+    "ASIN":"B07ZZDLKFJ",
+    "tbrating": 3,
+    "characters": "Minnie",
     "notes": "Lovely design, very unique and available in a great range of sizes"
   },
   {
     "ASIN":"B08BHH8MDM",
     "tbrating": 3,
+    "characters": "Mickey",
+    "notes": "No notes for this case"
+  },
+  {
+    "ASIN":"B071HVDF8S",
+    "tbrating": 3,
+    "characters": "Donald",
+    "notes": "No notes for this case"
+  },
+  {
+    "ASIN":"B0DG5X8RCT",
+    "tbrating": 5,
+    "characters": "Mickey",
     "notes": "No notes for this case"
   }
 ]
