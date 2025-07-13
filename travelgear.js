@@ -46,6 +46,7 @@ function showFilters()
 {
  console.log("Showing Filters...");
  const filterTab = document.getElementById("filters");
+ filterTab.innerHTML = "";
  const filterTitle = document.createElement("h2");
  filterTitle.textContent = "Search Filters";
  filterTab.appendChild(filterTitle);
