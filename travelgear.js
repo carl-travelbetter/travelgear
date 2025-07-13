@@ -61,7 +61,7 @@ fetch('casetype.json')
 .then(response => response.json())
 .then(data => {
  casetypeFilters = data;
- console.log("Case Type Filters Loaded...",casetypeFllters);
+ console.log("Case Type Filters Loaded...",casetypeFilters);
 })
 .catch(error => console.error("Error loading type filters:",error));
 
