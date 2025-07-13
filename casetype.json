@@ -1,1 +1,22 @@
-
+[
+  {
+    "id":"cabin",
+    "label":"Cabin Bags",
+    "icon":"T"
+  },
+  {
+    "id":"hold",
+    "label":"Hold Luggage",
+    "icon":"T"
+  },
+  {
+    "id":"ride-on",
+    "label":"Ride On Suitcase",
+    "icon":"T"
+  }
+  {
+    "id":"kids",
+    "label":"Kids Suitcase",
+    "icon":"T"
+  }
+]
