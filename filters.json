@@ -34,5 +34,23 @@
     "type":"character",
     "value":"Donald",
     "icon":"C"
+  },
+  {
+    "label":"Canvas",
+    "type":"material",
+    "value":"Canvas",
+    "icon":"M"
+  },
+  {
+    "label":"Hardshell",
+    "type":"material",
+    "value":"Hardshell",
+    "icon":"M"
+  },
+  {
+    "label":"Metal",
+    "type":"material",
+    "value":"Metal",
+    "icon":"M"
   }
 ]
