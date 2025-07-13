@@ -82,6 +82,7 @@ function loadTopThreeResults()
     const gearCard = document.createElement("div");
      gearCard.className = "gearCard";
     const asin = document.createElement("p");
+    asin.className = "product-info";
     asin.textContent = item.ASIN;
     gearCard.appendChild(asin);
     const itemImage = document.createElement("img");
@@ -89,10 +90,12 @@ function loadTopThreeResults()
        itemImage.src = item.Images.Primary.Large.URL;
        gearCard.appendChild(itemImage);
     const buyItLink = document.createElement("a");
+     buyItLink.className = "product-info";
      buyItLink.href = item.DetailPageURL;
      buyItLink.textContent = "Buy It Now";
      gearCard.appendChild(buyItLink);
      const price = document.createElement("p");
+     price.className = "product-info";
      price.textContent = item.Offers.Listings[0].Price.DisplayAmount;
      gearCard.appendChild(price);
   
@@ -105,8 +108,10 @@ function loadTopThreeResults()
          console.log("***Match Found***");
          const infoHeader = document.createElement("h2");
          infoHeader.textContent = "Additional Information";
+         infoHeader..className = "product-info";
          gearCard.appendChild(infoHeader);
          const notes = document.createElement("p");
+         notes.className = "product-info";
          notes.textContent = entry.notes;
          gearCard.appendChild(notes);
        }
