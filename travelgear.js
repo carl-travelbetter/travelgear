@@ -90,7 +90,7 @@ function loadTopThreeResults()
        itemImage.src = item.Images.Primary.Large.URL;
        gearCard.appendChild(itemImage);
     const buyItLink = document.createElement("a");
-     buyItLink.className = "product-info";
+     //buyItLink.className = "product-info";
      buyItLink.href = item.DetailPageURL;
      //buyItLink.textContent = "Buy It Now";
      const buyItButton = document.createElement("button");
