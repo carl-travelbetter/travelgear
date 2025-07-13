@@ -105,7 +105,10 @@ function showFilters()
  filterTab.appendChild(characterFilters);
  filterTab.appendChild(materialFilters);
 
- 
+ const applyButton = document.getElementById("applyButton");
+ applyButton.style.display = block;
+ const clearButton = document.getElementById("clearButton");
+ clearButton.style.display = block;
  
 }
 
@@ -113,6 +116,12 @@ function showFilters()
 function filterResults()
 {
   console.log("Filter Results...");
+}
+
+function clearFilters()
+{
+  console.log("clear Filters...");
+  
 }
 
 
