@@ -53,7 +53,9 @@ body {
   background-color: #fff;
   border: 1px solid #bbb;
   border-radius: 6px;
-  padding: 5px 5px;
+  padding: 1rem;
+  margin-left: 5vw;
+  margin-bottom: 5vw;  
   cursor: pointer;
 }
 .filter-btn.active {
