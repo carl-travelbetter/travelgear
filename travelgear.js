@@ -35,13 +35,8 @@ fetch('filters.json')
  })
  .catch(error => console.error("Error loading filters data:", error));
 
-//Onload function to display the top three items
-/*document.addEventListener("DOMContentLoaded", () => {
-  console.log("On load function...");
-  loadTopThreeResults();
 
-});*/
-
+//Show the filter options and assign listeners
 function showFilters()
 {
  console.log("Showing Filters...");
@@ -74,13 +69,13 @@ function showFilters()
   const filterButton = document.createElement("button");
     filterButton.className = "filter-btn";
     filterButton.setAttribute("data-tag", filter.label);
-    filterButton.innerHTML = `${filter.icon} ${filter.label}`;
+    filterButton.innerHTML = `${filter.label}`;
 
    //Make the button do something when clicked
   filterButton.addEventListener("click", () => {
       filterButton.classList.toggle("active");
     
-     // activeTags = Array.from(document.querySelectorAll('.tag-btn.active'))
+     // activeTags = Array.from(document.querySelectorAll('.filter-btn.active'))
        // .map(btn => btn.dataset.tag);
     console.log(filter.label+" Filter Selected"); 
       
