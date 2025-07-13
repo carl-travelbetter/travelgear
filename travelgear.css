@@ -72,9 +72,10 @@ body {
 
 .product-info {
    display: block;
+   text-align: center;
    margin-left: auto;
    margin-right: auto;
-   color: white;
+   color: black;
 }
       
 
