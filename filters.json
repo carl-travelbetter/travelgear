@@ -1,8 +1,20 @@
 [
   {
-    "label":"Under £100",
+    "label":"£100",
     "type":"price",
     "value":"100",
+    "icon":"£"
+  },
+  {
+    "label":"£150",
+    "type":"price",
+    "value":"150",
+    "icon":"£"
+  },
+  {
+    "label":"£200",
+    "type":"price",
+    "value":"200",
     "icon":"£"
   },
   {
