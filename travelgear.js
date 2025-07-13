@@ -135,7 +135,7 @@ function loadTopThreeResults()
      gearCard.appendChild(buyItLink);
      const price = document.createElement("p");
      price.className = "product-info";
-     price.textContent = item.Offers.Listings[0].Price.DisplayAmount;
+     price.textContent = "Price "+item.Offers.Listings[0].Price.DisplayAmount;
      gearCard.appendChild(price);
   
      //Add additional information, if found
