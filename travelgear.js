@@ -155,6 +155,7 @@ function getGear()
        gearCard.appendChild(itemImage);
    const buyItLink = document.createElement("a");
      buyItLink.href = item.DetailPageURL;
+     buyItLink.target = "_blank";
      const buyItButton = document.createElement("button");
      buyItButton.className = "buyit-button";
      buyItButton.textContent = "Buy It Now";
