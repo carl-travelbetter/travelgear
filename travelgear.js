@@ -53,19 +53,19 @@ function showFilters()
  
  //Price Filters
  const priceFilters = document.createElement("div");
- const priceFiltersHeader = documents.createElement("h3");
+ const priceFiltersHeader = document.createElement("h3");
  priceFilterHeader.textContent = "Price - Up to";
  priceFilters.appendChild(priceFilterHeader);
 
  //Character Filters
  const characterFilters = document.createElement("div");
- const characterFiltersHeader = documents.createElement("h3");
+ const characterFiltersHeader = document.createElement("h3");
  characterFiltersHeader.textContent = "Characters";
  characterFilters.appendChild(characterFilterHeader);
 
  //Material Filters
  const materialFilters = document.createElement("div");
- const materialFiltersHeader = documents.createElement("h3");
+ const materialFiltersHeader = document.createElement("h3");
  materialFiltersHeader.textContent = "Materials";
  materialFilters.appendChild(materialFilterHeader);
  
