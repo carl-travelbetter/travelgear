@@ -82,7 +82,6 @@ function showFilters()
         .map(btn => btn.dataset.label);
     console.log(filter.label+" Filter Selected"); 
     console.log("Filter list "+activeFilters.length);
-    filterResults();
       
    });
   if (filter.type == "price")
@@ -116,6 +115,10 @@ function showFilters()
 function filterResults()
 {
   console.log("Filter Results...");
+  //Use the filter array to go through the extra info and find the matching ASIN numbers,
+  //Take that list of ASIN numbers and create the relevant cards from the travelgear data
+
+ 
 }
 
 function clearFilters()
