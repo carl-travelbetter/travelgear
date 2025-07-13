@@ -54,20 +54,20 @@ function showFilters()
  //Price Filters
  const priceFilters = document.createElement("div");
  const priceFiltersHeader = document.createElement("h3");
- priceFilterHeader.textContent = "Price - Up to";
- priceFilters.appendChild(priceFilterHeader);
+ priceFiltersHeader.textContent = "Price - Up to";
+ priceFilters.appendChild(priceFiltersHeader);
 
  //Character Filters
  const characterFilters = document.createElement("div");
  const characterFiltersHeader = document.createElement("h3");
  characterFiltersHeader.textContent = "Characters";
- characterFilters.appendChild(characterFilterHeader);
+ characterFilters.appendChild(characterFiltersHeader);
 
  //Material Filters
  const materialFilters = document.createElement("div");
  const materialFiltersHeader = document.createElement("h3");
  materialFiltersHeader.textContent = "Materials";
- materialFilters.appendChild(materialFilterHeader);
+ materialFilters.appendChild(materialFiltersHeader);
  
  filters.forEach(filter => {
   console.log("Filter "+filter.label);
