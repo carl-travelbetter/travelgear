@@ -50,6 +50,25 @@ function showFilters()
  const filterTitle = document.createElement("h2");
  filterTitle.textContent = "Search Filters";
  filterTab.appendChild(filterTitle);
+ 
+ //Price Filters
+ const priceFilters = document.createElement("div");
+ const priceFiltersHeader = documents.createElement("h3");
+ priceFilterHeader.textContent = "Price - Up to";
+ priceFilters.appendChild(priceFilterHeader);
+
+ //Character Filters
+ const characterFilters = document.createElement("div");
+ const characterFiltersHeader = documents.createElement("h3");
+ characterFiltersHeader.textContent = "Characters";
+ characterFilters.appendChild(characterFilterHeader);
+
+ //Material Filters
+ const materialFilters = document.createElement("div");
+ const materialFiltersHeader = documents.createElement("h3");
+ materialFiltersHeader.textContent = "Materials";
+ materialFilters.appendChild(materialFilterHeader);
+ 
  filters.forEach(filter => {
   console.log("Filter "+filter.label);
   const filterButton = document.createElement("button");
@@ -66,10 +85,25 @@ function showFilters()
     console.log(filter.label+" Filter Selected"); 
       
    });
-
+  if (filter.type == "price")
+  {
+   priceFilters.appendChild(filterButton);
+  }
+  if (filter.type == "character")
+  {
+   characterFilters.appendChild(filterButton);
+  }
+  if (filter.type == "material")
+  {
+   materialFilers.appendChild(filterButton);
+  }
+   
   
-  filterTab.appendChild(filterButton);
+  //filterTab.appendChild(filterButton);
  });
+ filterTab.appendChild(priceFilters);
+ filterTab.appendChild(characterFilters);
+ filterTab.appendChild(materialFilters);
 }
 
 function loadTopThreeResults()
