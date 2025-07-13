@@ -82,6 +82,7 @@ function showFilters()
         .map(btn => btn.dataset.label);
     console.log(filter.label+" Filter Selected"); 
     console.log("Filter list "+activeFilters.length);
+    filterResults();
       
    });
   if (filter.type == "price")
@@ -103,7 +104,17 @@ function showFilters()
  filterTab.appendChild(priceFilters);
  filterTab.appendChild(characterFilters);
  filterTab.appendChild(materialFilters);
+
+ 
+ 
 }
+
+//Function to apply the selected filter and refine the results. 
+function filterResults()
+{
+  console.log("Filter Results...");
+}
+
 
 function loadTopThreeResults()
 {
