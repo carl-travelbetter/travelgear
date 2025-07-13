@@ -1,17 +1,16 @@
 body {
     
   font-family: sans-serif;
-  margin: 0;
-  padding: 1px;
   box-sizing: border-box;
 }
 
 .gearCard {
-padding: 1rem;
+padding: 10vw 10vh;
   margin: auto;
   background-color: #c6cef7; /* optional: or keep your current color */
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
   border-radius: 12px;
+  box-sizing: border-box;  
   text-align: left;
 }
 
