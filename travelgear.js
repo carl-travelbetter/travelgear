@@ -49,7 +49,7 @@ fetch('characterfilters.json')
 
 let priceFilters = [];
 fetch('pricefilters.json')
-.then(reponse => response.json())
+.then(response => response.json())
 .then(data => {
  priceFilters = data;
  console.log("Price Filters Loaded...",priceFilters);
