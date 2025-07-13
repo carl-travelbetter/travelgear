@@ -84,6 +84,7 @@ function loadTopThreeResults()
     asin.textContent = item.ASIN;
     gearCard.appendChild(asin);
     const itemImage = document.createElement("img");
+    itemImage.className = "product-image"; 
        itemImage.src = item.Images.Primary.Large.URL;
        gearCard.appendChild(itemImage);
     const buyItLink = document.createElement("a");
