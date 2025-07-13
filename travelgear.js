@@ -92,6 +92,7 @@ function loadTopThreeResults()
     const buyItLink = document.createElement("a");
      //buyItLink.className = "product-info";
      buyItLink.href = item.DetailPageURL;
+     buyItLink.target = "_blank";
      //buyItLink.textContent = "Buy It Now";
      const buyItButton = document.createElement("button");
      buyItButton.className = "buyit-button";
