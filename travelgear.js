@@ -87,9 +87,9 @@ function showFilters()
 
  //Character Filters
  const characterOptions = document.createElement("div");
- const characterHeader = document.createElement("h3");
- characterHeader.textContent = "Characters";
- characterOptions.appendChild(characterHeader);
+ const characterOptionsHeader = document.createElement("h3");
+ characterOptionsHeader.textContent = "Characters";
+ characterOptions.appendChild(characterOptionsHeader);
 
  console.log("Character Filter Length "+characterFilters.length);
  
@@ -141,7 +141,7 @@ function showFilters()
   //filterTab.appendChild(filterButton);
  });
  filterTab.appendChild(priceOptions);
- filterTab.appendChild(characterSearchOptions);
+ filterTab.appendChild(characterOptions);
  filterTab.appendChild(materialFilters);
 
  const applyButton = document.getElementById("applyButton");
