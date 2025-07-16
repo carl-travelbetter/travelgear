@@ -140,7 +140,7 @@ function showFilters()
   
   //filterTab.appendChild(filterButton);
  });
- filterTab.appendChild(priceOptionss);
+ filterTab.appendChild(priceOptions);
  filterTab.appendChild(characterSearchOptions);
  filterTab.appendChild(materialFilters);
 
