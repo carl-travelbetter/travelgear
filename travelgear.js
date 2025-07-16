@@ -86,10 +86,10 @@ function showFilters()
  priceFilters.appendChild(priceFiltersHeader);
 
  //Character Filters
- const characterButtons = document.createElement("div");
+ const characterSearchOptions = document.createElement("div");
  const characterHeader = document.createElement("h3");
- characterButtons.textContent = "Characters";
- characterHeader.appendChild(characterFiltersHeader);
+ characterHeader.textContent = "Characters";
+ characterSearchOptions.appendChild(characterHeader);
 
  characterFilters.forEach(filter => {
   console.log("Character Filters..."+filter.id);
@@ -139,7 +139,7 @@ function showFilters()
   //filterTab.appendChild(filterButton);
  });
  filterTab.appendChild(priceFilters);
- filterTab.appendChild(characterFilters);
+ filterTab.appendChild(characterSearchOptions);
  filterTab.appendChild(materialFilters);
 
  const applyButton = document.getElementById("applyButton");
