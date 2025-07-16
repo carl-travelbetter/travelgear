@@ -80,17 +80,19 @@ function showFilters()
  filterTab.appendChild(filterTitle);
  
  //Price Filters
- const priceFilters = document.createElement("div");
- const priceFiltersHeader = document.createElement("h3");
- priceFiltersHeader.textContent = "Price - Up to";
- priceFilters.appendChild(priceFiltersHeader);
+ const priceOptions = document.createElement("div");
+ const priceOptionssHeader = document.createElement("h3");
+ priceOptionssHeader.textContent = "Price - Up to";
+ priceOptions.appendChild(priceFiltersHeader);
 
  //Character Filters
- const characterSearchOptions = document.createElement("div");
+ const characterOptions = document.createElement("div");
  const characterHeader = document.createElement("h3");
  characterHeader.textContent = "Characters";
- characterSearchOptions.appendChild(characterHeader);
+ characterOptions.appendChild(characterHeader);
 
+ console.log("Character Filter Length "+characterFilters.length);
+ 
  characterFilters.forEach(filter => {
   console.log("Character Filters..."+filter.id);
  });
@@ -124,11 +126,11 @@ function showFilters()
    });
   if (filter.type == "price")
   {
-   priceFilters.appendChild(filterButton);
+   priceOptions.appendChild(filterButton);
   }
   if (filter.type == "character")
   {
-   characterSearchOptions.appendChild(filterButton);
+   characterOptions.appendChild(filterButton);
   }
   if (filter.type == "material")
   {
@@ -138,7 +140,7 @@ function showFilters()
   
   //filterTab.appendChild(filterButton);
  });
- filterTab.appendChild(priceFilters);
+ filterTab.appendChild(priceOptionss);
  filterTab.appendChild(characterSearchOptions);
  filterTab.appendChild(materialFilters);
 
