@@ -110,6 +110,7 @@ function showFilters()
     console.log("Filter list "+activeFilters.length);
    characterOptions.appendChild(filterButton);
  });
+ });
 
   
  
@@ -120,7 +121,7 @@ function showFilters()
  materialFilters.appendChild(materialFiltersHeader);
 
 
-/* 
+ 
  filters.forEach(filter => {
   console.log("Filter "+filter.label);
   const filterButton = document.createElement("button");
@@ -138,6 +139,7 @@ function showFilters()
     console.log("Filter list "+activeFilters.length);
       
    });
+  
   if (filter.type == "price")
   {
    priceOptions.appendChild(filterButton);
@@ -153,7 +155,7 @@ function showFilters()
    
   
   //filterTab.appendChild(filterButton);
- });*/
+ });
  filterTab.appendChild(priceOptions);
  filterTab.appendChild(characterOptions);
  filterTab.appendChild(materialFilters);
