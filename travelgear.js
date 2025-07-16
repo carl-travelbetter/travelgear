@@ -81,7 +81,7 @@ function showFilters()
  
  //Price Filters
  const priceOptions = document.createElement("div");
- const priceOptionssHeader = document.createElement("h3");
+ const priceOptionsHeader = document.createElement("h3");
  priceOptionsHeader.textContent = "Price - Up to";
  priceOptions.appendChild(priceOptionsHeader);
 
