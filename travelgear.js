@@ -95,6 +95,20 @@ function showFilters()
  
  characterFilters.forEach(filter => {
   console.log("Character Filters..."+filter.id);
+  const filterButton = document.createElement("button");
+    filterButton.className = "filter-btn";
+    filterButton.setAttribute("data-label", filter.label);
+    filterButton.innerHTML = `${filter.label}`;
+
+   //Make the button do something when clicked
+  filterButton.addEventListener("click", () => {
+      filterButton.classList.toggle("active");
+    
+     activeFilters = Array.from(document.querySelectorAll('.filter-btn.active'))
+        .map(btn => btn.dataset.label);
+    console.log(filter.label+" Filter Selected"); 
+    console.log("Filter list "+activeFilters.length);
+   characterOptions.appendChild(filterButton);
  });
 
   
@@ -106,7 +120,7 @@ function showFilters()
  materialFilters.appendChild(materialFiltersHeader);
 
 
- 
+/* 
  filters.forEach(filter => {
   console.log("Filter "+filter.label);
   const filterButton = document.createElement("button");
@@ -136,7 +150,7 @@ function showFilters()
   {
    materialFilters.appendChild(filterButton);
   }
-   
+  */   
   
   //filterTab.appendChild(filterButton);
  });
