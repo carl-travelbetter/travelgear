@@ -150,10 +150,10 @@ function showFilters()
   {
    materialFilters.appendChild(filterButton);
   }
-  */   
+   
   
   //filterTab.appendChild(filterButton);
- });
+ });*/
  filterTab.appendChild(priceOptions);
  filterTab.appendChild(characterOptions);
  filterTab.appendChild(materialFilters);
