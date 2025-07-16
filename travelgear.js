@@ -1,6 +1,9 @@
 //Active filters
 let activeFilters = [];
 
+//Filtered List
+let filteredResults = [];
+
 let topThreeResults = [];
  fetch('topthree.json')
   .then(response => response.json())
@@ -83,16 +86,24 @@ function showFilters()
  priceFilters.appendChild(priceFiltersHeader);
 
  //Character Filters
- const characterFilters = document.createElement("div");
- const characterFiltersHeader = document.createElement("h3");
- characterFiltersHeader.textContent = "Characters";
- characterFilters.appendChild(characterFiltersHeader);
+ const characterButtons = document.createElement("div");
+ const characterHeader = document.createElement("h3");
+ characterButtons.textContent = "Characters";
+ characterHeader.appendChild(characterFiltersHeader);
 
+ characterFilters.forEach(filter => {
+  console.log("Character Filters..."+filter.id);
+ });
+
+  
+ 
  //Material Filters
  const materialFilters = document.createElement("div");
  const materialFiltersHeader = document.createElement("h3");
  materialFiltersHeader.textContent = "Materials";
  materialFilters.appendChild(materialFiltersHeader);
+
+
  
  filters.forEach(filter => {
   console.log("Filter "+filter.label);
