@@ -108,9 +108,9 @@ function showFilters()
         .map(btn => btn.dataset.label);
     console.log(filter.label+" Filter Selected"); 
     console.log("Filter list "+activeFilters.length);
-   characterOptions.appendChild(filterButton);
+   
  });
-  
+  characterOptions.appendChild(filterButton);
  });
 
   
