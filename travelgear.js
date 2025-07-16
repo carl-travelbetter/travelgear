@@ -97,8 +97,8 @@ function showFilters()
   console.log("Character Filters..."+filter.id);
   const filterButton = document.createElement("button");
     filterButton.className = "filter-btn";
-    filterButton.setAttribute("data-label", filter.label);
-    filterButton.innerHTML = `${filter.label}`;
+    filterButton.setAttribute("data-label", filter.id);
+    filterButton.innerHTML = `${filter.id}`;
 
    //Make the button do something when clicked
   filterButton.addEventListener("click", () => {
@@ -110,6 +110,7 @@ function showFilters()
     console.log("Filter list "+activeFilters.length);
    characterOptions.appendChild(filterButton);
  });
+  
  });
 
   
@@ -146,7 +147,7 @@ function showFilters()
   }
   if (filter.type == "character")
   {
-   characterOptions.appendChild(filterButton);
+   //characterOptions.appendChild(filterButton);
   }
   if (filter.type == "material")
   {
@@ -156,6 +157,7 @@ function showFilters()
   
   //filterTab.appendChild(filterButton);
  });
+ 
  filterTab.appendChild(priceOptions);
  filterTab.appendChild(characterOptions);
  filterTab.appendChild(materialFilters);
