@@ -128,7 +128,7 @@ function showFilters()
   }
   if (filter.type == "character")
   {
-   characterFilters.appendChild(filterButton);
+   characterSearchOptions.appendChild(filterButton);
   }
   if (filter.type == "material")
   {
