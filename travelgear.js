@@ -45,7 +45,7 @@ let characterFilters = [];
 fetch('characterfilters.json')
  .then (response => response.json())
  .then(data => {
-  charactersFilters = data;
+  characterFilters = data;
   console.log("Character Filters Loaded...", characterFilters);
  })
  .catch(error => console.error("Error loading character filters:",error));
