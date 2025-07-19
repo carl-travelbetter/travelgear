@@ -1,5 +1,6 @@
 //Active filters
 let activeFilters = [];
+let characterFilters = [];
 
 //Filtered List
 let filteredResults = [];
@@ -104,10 +105,10 @@ function showFilters()
   filterButton.addEventListener("click", () => {
       filterButton.classList.toggle("active");
     
-     activeFilters = Array.from(document.querySelectorAll('.filter-btn.active'))
+     characterFilters = Array.from(document.querySelectorAll('.filter-btn.active'))
         .map(btn => btn.dataset.label);
     console.log(filter.label+" Filter Selected"); 
-    console.log("Filter list "+activeFilters.length);
+    console.log("Filter list "+characterFilters.length);
     filterResults();
  });
   characterOptions.appendChild(filterButton);
@@ -175,7 +176,9 @@ function filterResults()
   console.log("Filter Results...");
   //Use the filter array to go through the extra info and find the matching ASIN numbers,
   //Take that list of ASIN numbers and create the relevant cards from the travelgear data
-
+  characterFilters.forEach(character => {
+   console.log("Chracter Filter..."+character);
+  });
  
 }
 
