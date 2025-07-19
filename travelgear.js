@@ -5,6 +5,7 @@ let activeCharacterFilters = [];
 //Filtered List
 let filteredResults = [];
 
+//Load my favourite top three results ready for display
 let topThreeResults = [];
  fetch('topthree.json')
   .then(response => response.json())
@@ -15,6 +16,7 @@ let topThreeResults = [];
   })
   .catch(error => console.error("Error loading item data:", error));
 
+//Full set of Amazon results for the items
 let itemResults = [];
   fetch('disneycases.json')
   .then(response => response.json())
@@ -24,6 +26,7 @@ let itemResults = [];
   })
   .catch(error => console.error("Error loading item data:", error));
 
+//Additional, TB added information for each suitcase
 let additionalInfo = [];
  fetch('gearextras.json')
   .then(response => response.json())
@@ -33,6 +36,7 @@ let additionalInfo = [];
   })
  .catch(error => console.error("Error loading additional information file:", error));
 
+//Filters to enable search options for the user
 let filters = [];
 fetch('filters.json')
  .then (response => response.json())
