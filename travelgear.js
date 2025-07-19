@@ -206,12 +206,12 @@ function loadFilteredResults(matchingCases)
    results = document.getElementById("results");
   results.innerHTML = "";
 
-  let arrayCheck = Array.isArray(itemResults);
-  console.log("Array Check on Item Results = "+arrayCheck);
+  let arrayCheck = Array.isArray(itemResults.ItemsResult.Items);
+  console.log("Array Check on Item Results items = "+arrayCheck);
  
   //lookup a match in the main file and then create the card and append to the results
-  filteredResults = itemResults.filter(item =>
-    matchingCases.length === 0 || matchingCases.every(match => item.ItemResults.Items.ASIN.includes(match.asin))
+  filteredResults = itemResults.ItemsResult.Items.filter(item =>
+    matchingCases.length === 0 || matchingCases.every(match => item.ASIN.includes(match.asin))
   );
    
  
