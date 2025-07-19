@@ -128,7 +128,7 @@ function showFilters()
 
 
  //load the character filter buttons
- filters.characters.forEach(filter => {
+ filters.filters.characters.forEach(filter => {
   console.log("Filter "+filter.label);
   const filterButton = document.createElement("button");
     filterButton.className = "filter-btn";
