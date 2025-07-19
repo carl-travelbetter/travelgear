@@ -199,7 +199,7 @@ function filterResults()
      results = document.getElementById("results");
      results.innerHTML = "";
      const noMatchMessage = document.createElement("p");
-     noMatchMessage.textContent() = "No Matches Found";
+     noMatchMessage.textContent = "No Matches Found";
      results.appendChild(noMatchMessage);
    }
  
