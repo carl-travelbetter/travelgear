@@ -178,7 +178,7 @@ function filterResults()
   //Take that list of ASIN numbers and create the relevant cards from the travelgear data
   
    const matchingCases = additionalInfo.filter(suitcase =>
-    activeCharacterFilters.length === 0 || activeCharacterFilters.every(match => suitcase.characters.includes(character))
+    activeCharacterFilters.length === 0 || activeCharacterFilters.every(match => suitcase.characters.includes(match))
   );
 
   
