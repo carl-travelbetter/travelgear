@@ -8,14 +8,12 @@
      {
        "id":"minnie",
        "label":"Minnie Mouse"
-     }
+     },
      {
        "id":"donald",
        "label":"Donald"
      }
-   ]
-  },
-  {
+   ],
   "pricerange": [
     {
       "value":100,
