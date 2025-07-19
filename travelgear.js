@@ -108,7 +108,7 @@ function showFilters()
      activeCharacterFilters = Array.from(document.querySelectorAll('.filter-btn.active'))
         .map(btn => btn.dataset.label);
     console.log(filter.id+" Filter Selected"); 
-    console.log("Filter list "+characterFilters.length);
+    console.log("Filter list "+activeCharacterFilters.length);
     filterResults();
  });
   characterOptions.appendChild(filterButton);
