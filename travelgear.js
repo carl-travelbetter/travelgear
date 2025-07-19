@@ -175,7 +175,7 @@ function showFilters()
   priceOptions.appendChild(filterButton);  
  });
 
- //load the price filter buttons
+ //load the type filter buttons
  filters.filters.type.forEach(filter => {
   console.log("Filter "+filter.label);
   const filterButton = document.createElement("button");
@@ -194,7 +194,7 @@ function showFilters()
       
    });  
   //Add character button to the character filters.
-  priceOptions.appendChild(filterButton);  
+  typeOptions.appendChild(filterButton);  
  });
  
  
