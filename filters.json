@@ -1,56 +1,37 @@
-[
-  {
-    "label":"£100",
-    "type":"price",
-    "value":"100",
-    "icon":"£"
+{
+  "filters": {
+   "characters": [
+     { 
+       "id":"mickey",
+       "label":"Mickey Mouse"
+     },
+     {
+       "id":"minnie",
+       "label":"Minnie Mouse"
+     }
+     {
+       "id":"donald",
+       "label":"Donald"
+     }
+   ]
   },
   {
-    "label":"£150",
-    "type":"price",
-    "value":"150",
-    "icon":"£"
-  },
-  {
-    "label":"£200",
-    "type":"price",
-    "value":"200",
-    "icon":"£"
-  },
-  {
-    "label":"Mickey Mouse",
-    "type":"character",
-    "value":"Mickey",
-    "icon":"C"
-  },
-  {
-    "label":"Minnie Mouse",
-    "type":"character",
-    "value":"Minnie",
-    "icon":"C"
-  },
-  {
-    "label":"Donald Duck",
-    "type":"character",
-    "value":"Donald",
-    "icon":"C"
-  },
-  {
-    "label":"Canvas",
-    "type":"material",
-    "value":"Canvas",
-    "icon":"M"
-  },
-  {
-    "label":"Hardshell",
-    "type":"material",
-    "value":"Hardshell",
-    "icon":"M"
-  },
-  {
-    "label":"Metal",
-    "type":"material",
-    "value":"Metal",
-    "icon":"M"
-  }
-]
+  "pricerange": [
+    {
+      "value":100,
+      "label":"Up to £100"
+    },
+    {
+      "value":200,
+      "label":"Up to £200"
+    },
+    {
+      "value":300,
+      "label":"Up to £200"
+    }
+  ]
+ }
+}
+    
+     
+  
