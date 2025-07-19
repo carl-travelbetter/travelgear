@@ -179,8 +179,8 @@ function filterResults()
   activeCharacterFilters.forEach(character => {
    console.log("Chracter Filter..."+character);
 
-   const matchingCases = additionalInfo.filter(case =>
-    activeCharacterFilters.length === 0 || activeCharacterFilters.every(match => case.characters.includes(character))
+   const matchingCases = additionalInfo.filter(suitcase =>
+    activeCharacterFilters.length === 0 || activeCharacterFilters.every(match => suitcase.characters.includes(character))
   );
  /*
   if (matchingCases.length === 0) {
