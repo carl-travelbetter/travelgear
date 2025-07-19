@@ -196,10 +196,72 @@ function filterResults()
     return;
   }*/
    
-
-
-  
  
+}
+
+function loadFilteredResults(matchingCases)
+{
+  console.log("Load Filtered Results...");
+   results = document.getElementById("results");
+  results.innerHTML = "";
+
+  //lookup a match in the main file and then create the card and append to the results
+  filteredResults = itemResults.filter(item =>
+    matchingCases.length === 0 || matchingCases.every(match.asin => suitcase.ItemResults.Items.ASIN.includes(match.asin))
+  );
+   
+ 
+  filteredRestules.ItemsResult.Items.forEach(item => {
+    const gearCard = document.createElement("div");
+     gearCard.className = "gearCard";
+    const asin = document.createElement("p");
+    asin.className = "product-info";
+    asin.textContent = item.ASIN;
+    gearCard.appendChild(asin);
+    const itemImage = document.createElement("img");
+    itemImage.className = "product-image"; 
+       itemImage.src = item.Images.Primary.Large.URL;
+       gearCard.appendChild(itemImage);
+    const buyItLink = document.createElement("a");
+     //buyItLink.className = "product-info";
+     buyItLink.href = item.DetailPageURL;
+     buyItLink.target = "_blank";
+     //buyItLink.textContent = "Buy It Now";
+     const buyItButton = document.createElement("button");
+     buyItButton.className = "buyit-button";
+     buyItButton.textContent = "Buy It Now";
+     buyItLink.appendChild(buyItButton);
+     gearCard.appendChild(buyItLink);
+     const price = document.createElement("p");
+     price.className = "product-info";
+     price.textContent = "Price "+item.Offers.Listings[0].Price.DisplayAmount;
+     gearCard.appendChild(price);
+  
+     //Add additional information, if found
+     additionalInfo.forEach(entry => {
+       const asinLookup = entry.ASIN;
+       console.log("Additional ASIN Lookup "+asinLookup);
+       if (asinLookup == item.ASIN)
+       {
+         console.log("***Match Found***");
+         const infoHeader = document.createElement("h2");
+         infoHeader.textContent = "Additional Information";
+         infoHeader.className = "product-info";
+         gearCard.appendChild(infoHeader);
+         const notes = document.createElement("p");
+         notes.className = "product-info";
+         notes.textContent = entry.notes;
+         gearCard.appendChild(notes);
+       }
+       else
+       {
+         console.log("No Match Found");
+       }
+       
+     });
+     
+     results.appendChild(gearCard);
+   });
 }
 
 function clearFilters()
