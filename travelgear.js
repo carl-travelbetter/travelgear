@@ -81,7 +81,7 @@ function showFilters()
  const filterTab = document.getElementById("filters");
  filterTab.innerHTML = "";
  const filterTitle = document.createElement("h2");
- filterTitle.textContent = "Search Filters";
+ filterTitle.textContent = "Search Options";
  filterTab.appendChild(filterTitle);
  
  //Price Filters
@@ -96,8 +96,8 @@ function showFilters()
  characterOptionsHeader.textContent = "Characters";
  characterOptions.appendChild(characterOptionsHeader);
 
- console.log("Character Filter Length "+characterFilters.length);
- 
+ //console.log("Character Filter Length "+characterFilters.length);
+ /*
  characterFilters.forEach(filter => {
   //console.log("Character Filters..."+filter.id);
   const filterButton = document.createElement("button");
@@ -116,23 +116,23 @@ function showFilters()
     filterResults();
  });
   characterOptions.appendChild(filterButton);
- });
+ });*/
 
   
  
- //Material Filters
- const materialFilters = document.createElement("div");
- const materialFiltersHeader = document.createElement("h3");
- materialFiltersHeader.textContent = "Materials";
- materialFilters.appendChild(materialFiltersHeader);
+ //Type Filters
+ const typeFilters = document.createElement("div");
+ const typeFiltersHeader = document.createElement("h3");
+ typeFiltersHeader.textContent = "Type of suitcase";
+ typeFilters.appendChild(typeFiltersHeader);
 
 
- /*
- filters.forEach(filter => {
+ //load the character filter buttons
+ filters.characters.forEach(filter => {
   console.log("Filter "+filter.label);
   const filterButton = document.createElement("button");
     filterButton.className = "filter-btn";
-    filterButton.setAttribute("data-label", filter.label);
+    filterButton.setAttribute("data-label", filter.id);
     filterButton.innerHTML = `${filter.label}`;
 
    //Make the button do something when clicked
@@ -145,7 +145,8 @@ function showFilters()
     console.log("Filter list "+activeFilters.length);
       
    });
-  
+
+  /*
   if (filter.type == "price")
   {
    priceOptions.appendChild(filterButton);
@@ -157,11 +158,11 @@ function showFilters()
   if (filter.type == "material")
   {
    materialFilters.appendChild(filterButton);
-  }
-   
+  }*/
+   characterOptions.appendChild(filterButton);
   
   //filterTab.appendChild(filterButton);
- });*/
+ });
  
 // filterTab.appendChild(priceOptions);
  filterTab.appendChild(characterOptions);
