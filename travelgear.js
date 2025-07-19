@@ -1,7 +1,7 @@
 //Active filters
 let activeFilters = [];
 let characterFilters = [];
-let criceFilters = [];
+let priceFilters = [];
 let typeFilters = [];
 
 //Filtered List
