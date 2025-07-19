@@ -178,7 +178,19 @@ function filterResults()
   //Take that list of ASIN numbers and create the relevant cards from the travelgear data
   activeCharacterFilters.forEach(character => {
    console.log("Chracter Filter..."+character);
+
+   const matchingCases = additionalInfo.filter(case =>
+    activeCharacterFilters.length === 0 || activeCharacterFilters.every(match => case.characters.includes(character))
+  );
+ /*
+  if (matchingCases.length === 0) {
+    container.innerHTML = "<p>No routes match your selected needs.</p>";
+    return;
+  }*/
+   
   });
+
+  
  
 }
 
