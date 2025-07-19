@@ -215,7 +215,7 @@ function loadFilteredResults(matchingCases)
  
   //lookup a match in the main file and then create the card and append to the results
   filteredResults = itemResults.ItemsResult.Items.filter(item =>
-    matchingCases.length === 0 || matchingCases.every(match => item.ASIN.includes(match.ASIN))
+    matchingCases.length === 0 || matchingCases.some(match => item.ASIN.includes(match.ASIN))
   );
 
  console.log("Size of filtered results array = "+filteredResults.length);
