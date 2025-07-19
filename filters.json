@@ -27,7 +27,21 @@
       "value":300,
       "label":"Up to £200"
     }
-  ]
+  ],
+    "type": [
+      {
+        "id":"spinner",
+        "label":"Spinner"
+      },
+      {
+        "id":"cabin",
+        "label":"Cabin"
+      },
+      {
+        "id":"ride",
+        "label":"Ride-On"
+      }
+    ]
  }
 }
     
