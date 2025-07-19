@@ -207,7 +207,7 @@ function loadFilteredResults(matchingCases)
 
   //lookup a match in the main file and then create the card and append to the results
   filteredResults = itemResults.filter(item =>
-    matchingCases.length === 0 || matchingCases.every(match.asin => suitcase.ItemResults.Items.ASIN.includes(match.asin))
+    matchingCases.length === 0 || matchingCases.every(match => suitcase.ItemResults.Items.ASIN.includes(match.asin))
   );
    
  
