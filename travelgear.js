@@ -188,9 +188,21 @@ function filterResults()
   );
 
   
-
-   console.log("Matching Cases Length..."+matchingCases.length);
-   loadFilteredResults(matchingCases);
+   let matchLength = matchingCases.length;
+   console.log("Matching Cases Length..."+matchLength);
+   if (matchLength > 0)
+   {
+     loadFilteredResults(matchingCases);
+   }
+   else
+   {
+     results = document.getElementById("results");
+     results.innerHTML = "";
+     const noMatchMessage = document.createElement("p");
+     noMatchMessage.textContent() = "No Matches Found";
+     results.appendChild(noMatchMessage);
+   }
+ 
  /*
   if (matchingCases.length === 0) {
     container.innerHTML = "<p>No routes match your selected needs.</p>";
