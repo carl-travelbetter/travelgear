@@ -206,8 +206,8 @@ function loadFilteredResults(matchingCases)
    results = document.getElementById("results");
   results.innerHTML = "";
 
-  matchingCases.forEach(case => {
-   console.log("Matching Case ASIN = "+case.ASIN);
+  matchingCases.forEach(match => {
+   console.log("Matching Case ASIN = "+match.ASIN);
   }
  
   let arrayCheck = Array.isArray(itemResults.ItemsResult.Items);
