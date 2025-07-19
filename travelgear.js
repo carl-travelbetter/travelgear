@@ -182,6 +182,8 @@ function filterResults()
    const matchingCases = additionalInfo.filter(suitcase =>
     activeCharacterFilters.length === 0 || activeCharacterFilters.every(match => suitcase.characters.includes(character))
   );
+
+   console.log("Matching Cases Length..."+matchingCases.length);
  /*
   if (matchingCases.length === 0) {
     container.innerHTML = "<p>No routes match your selected needs.</p>";
