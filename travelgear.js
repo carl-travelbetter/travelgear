@@ -190,6 +190,7 @@ function filterResults()
   
 
    console.log("Matching Cases Length..."+matchingCases.length);
+   loadFilteredResults(matchingCases);
  /*
   if (matchingCases.length === 0) {
     container.innerHTML = "<p>No routes match your selected needs.</p>";
