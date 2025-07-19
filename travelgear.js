@@ -73,7 +73,7 @@ fetch('casetype.json')
 //Show the filter options and assign listeners
 function showFilters()
 {
- console.log("Showing Filters...");
+ //console.log("Showing Filters...");
  const filterTab = document.getElementById("filters");
  filterTab.innerHTML = "";
  const filterTitle = document.createElement("h2");
@@ -95,7 +95,7 @@ function showFilters()
  console.log("Character Filter Length "+characterFilters.length);
  
  characterFilters.forEach(filter => {
-  console.log("Character Filters..."+filter.id);
+  //console.log("Character Filters..."+filter.id);
   const filterButton = document.createElement("button");
     filterButton.className = "filter-btn";
     filterButton.setAttribute("data-label", filter.id);
@@ -107,7 +107,7 @@ function showFilters()
     
      activeCharacterFilters = Array.from(document.querySelectorAll('.filter-btn.active'))
         .map(btn => btn.dataset.label);
-    console.log(filter.id+" Filter Selected"); 
+    //console.log(filter.id+" Filter Selected"); 
     console.log("Filter list "+activeCharacterFilters.length);
     filterResults();
  });
@@ -123,7 +123,7 @@ function showFilters()
  materialFilters.appendChild(materialFiltersHeader);
 
 
- 
+ /*
  filters.forEach(filter => {
   console.log("Filter "+filter.label);
   const filterButton = document.createElement("button");
@@ -157,11 +157,11 @@ function showFilters()
    
   
   //filterTab.appendChild(filterButton);
- });
+ });*/
  
- filterTab.appendChild(priceOptions);
+// filterTab.appendChild(priceOptions);
  filterTab.appendChild(characterOptions);
- filterTab.appendChild(materialFilters);
+// filterTab.appendChild(materialFilters);
 
  const applyButton = document.getElementById("applyButton");
  applyButton.style.display = "block";
