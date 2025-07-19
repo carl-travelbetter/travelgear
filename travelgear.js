@@ -215,7 +215,7 @@ function loadFilteredResults(matchingCases)
   );
    
  
-  filteredResults.ItemsResult.Items.forEach(item => {
+  filteredResults.forEach(item => {
     const gearCard = document.createElement("div");
      gearCard.className = "gearCard";
     const asin = document.createElement("p");
