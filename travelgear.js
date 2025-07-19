@@ -206,14 +206,19 @@ function loadFilteredResults(matchingCases)
    results = document.getElementById("results");
   results.innerHTML = "";
 
+  matchingCases.forEach(case => {
+   console.log("Matching Case ASIN = "+case.ASIN);
+  }
+ 
   let arrayCheck = Array.isArray(itemResults.ItemsResult.Items);
   console.log("Array Check on Item Results items = "+arrayCheck);
  
   //lookup a match in the main file and then create the card and append to the results
   filteredResults = itemResults.ItemsResult.Items.filter(item =>
-    matchingCases.length === 0 || matchingCases.every(match => item.ASIN.includes(match.asin))
+    matchingCases.length === 0 || matchingCases.every(match => item.ASIN.includes(match.ASIN))
   );
-   
+
+ console.log("Size of filtered results array = "+filteredResults.length);
  
   filteredResults.forEach(item => {
     const gearCard = document.createElement("div");
