@@ -1,6 +1,8 @@
 //Active filters
 let activeFilters = [];
-let activeCharacterFilters = [];
+let characterFilters = [];
+let criceFilters = [];
+let typeFilters = [];
 
 //Filtered List
 let filteredResults = [];
@@ -46,6 +48,7 @@ fetch('filters.json')
  })
  .catch(error => console.error("Error loading filters data:", error));
 
+/*
 let characterFilters = [];
 fetch('characterfilters.json')
  .then (response => response.json())
@@ -54,7 +57,9 @@ fetch('characterfilters.json')
   console.log("Character Filters Loaded...", characterFilters);
  })
  .catch(error => console.error("Error loading character filters:",error));
+ */
 
+/*
 let priceFilters = [];
 fetch('pricefilters.json')
 .then(response => response.json())
@@ -63,7 +68,9 @@ fetch('pricefilters.json')
  console.log("Price Filters Loaded...",priceFilters);
 })
 .catch(error => console.error("Error loading price filters:",error));
+*/
 
+/*
 let casetypeFilters = [];
 fetch('casetype.json')
 .then(response => response.json())
@@ -72,7 +79,7 @@ fetch('casetype.json')
  console.log("Case Type Filters Loaded...",casetypeFilters);
 })
 .catch(error => console.error("Error loading type filters:",error));
-
+*/
 
 //Show the filter options and assign listeners
 function showFilters()
@@ -96,6 +103,12 @@ function showFilters()
  characterOptionsHeader.textContent = "Characters";
  characterOptions.appendChild(characterOptionsHeader);
 
+ //Type Filters
+ const typeOptions = document.createElement("div");
+ const typeOptionsHeader = document.createElement("h3");
+ typeOptionsHeader.textContent = "Type";
+ typeOptions.appendChild(typeOptionsHeader);
+ 
  //console.log("Character Filter Length "+characterFilters.length);
  /*
  characterFilters.forEach(filter => {
@@ -118,15 +131,6 @@ function showFilters()
   characterOptions.appendChild(filterButton);
  });*/
 
-  
- 
- //Type Filters
- const typeFilters = document.createElement("div");
- const typeFiltersHeader = document.createElement("h3");
- typeFiltersHeader.textContent = "Type of suitcase";
- typeFilters.appendChild(typeFiltersHeader);
-
-
  //load the character filter buttons
  filters.filters.characters.forEach(filter => {
   console.log("Filter "+filter.label);
@@ -139,10 +143,10 @@ function showFilters()
   filterButton.addEventListener("click", () => {
       filterButton.classList.toggle("active");
     
-     activeFilters = Array.from(document.querySelectorAll('.filter-btn.active'))
+     characterFilters = Array.from(document.querySelectorAll('.filter-btn.active'))
         .map(btn => btn.dataset.label);
     console.log(filter.label+" Filter Selected"); 
-    console.log("Filter list "+activeFilters.length);
+    console.log("Filter list "+characterFilters.length);
       
    });  
   //Add character button to the character filters.
@@ -161,10 +165,32 @@ function showFilters()
   filterButton.addEventListener("click", () => {
       filterButton.classList.toggle("active");
     
-     activeFilters = Array.from(document.querySelectorAll('.filter-btn.active'))
+     priceFilters = Array.from(document.querySelectorAll('.filter-btn.active'))
         .map(btn => btn.dataset.label);
     console.log(filter.label+" Filter Selected"); 
-    console.log("Filter list "+activeFilters.length);
+    console.log("Filter list "+price.length);
+      
+   });  
+  //Add character button to the character filters.
+  priceOptions.appendChild(filterButton);  
+ });
+
+ //load the price filter buttons
+ filters.filters.type.forEach(filter => {
+  console.log("Filter "+filter.label);
+  const filterButton = document.createElement("button");
+    filterButton.className = "filter-btn";
+    filterButton.setAttribute("data-label", filter.id);
+    filterButton.innerHTML = `${filter.label}`;
+
+   //Make the button do something when clicked
+  filterButton.addEventListener("click", () => {
+      filterButton.classList.toggle("active");
+    
+     typeFilters = Array.from(document.querySelectorAll('.filter-btn.active'))
+        .map(btn => btn.dataset.label);
+    console.log(filter.label+" Filter Selected"); 
+    console.log("Filter list "+typeFilters.length);
       
    });  
   //Add character button to the character filters.
@@ -174,6 +200,7 @@ function showFilters()
  
  filterTab.appendChild(characterOptions);
  filterTab.appendChild(priceOptions);
+ filterTab.appendChild(typeOptions);
  // filterTab.appendChild(materialFilters);
 
  const applyButton = document.getElementById("applyButton");
@@ -191,13 +218,13 @@ function filterResults()
   //Take that list of ASIN numbers and create the relevant cards from the travelgear data
   
    let count = 0;
-   activeCharacterFilters.forEach(item => {
+   characterFilters.forEach(item => {
     count++;
     console.log("Active Character Filter.."+item+" count"+count);
    });
  
    const matchingCases = additionalInfo.filter(suitcase =>
-    activeCharacterFilters.length === 0 || activeCharacterFilters.every(match => suitcase.characters.includes(match))
+    characterFilters.length === 0 || characterFilters.every(match => suitcase.characters.includes(match))
   );
 
   
