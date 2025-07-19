@@ -146,7 +146,7 @@ function showFilters()
      characterFilters = Array.from(document.querySelectorAll('.filter-btn.active'))
         .map(btn => btn.dataset.label);
     console.log(filter.label+" Filter Selected"); 
-    console.log("Filter list "+characterFilters.length);
+    filterResults();
       
    });  
   //Add character button to the character filters.
@@ -168,7 +168,7 @@ function showFilters()
      priceFilters = Array.from(document.querySelectorAll('.filter-btn.active'))
         .map(btn => btn.dataset.label);
     console.log(filter.label+" Filter Selected"); 
-    console.log("Filter list "+price.length);
+    filterResults();
       
    });  
   //Add character button to the character filters.
@@ -190,7 +190,7 @@ function showFilters()
      typeFilters = Array.from(document.querySelectorAll('.filter-btn.active'))
         .map(btn => btn.dataset.label);
     console.log(filter.label+" Filter Selected"); 
-    console.log("Filter list "+typeFilters.length);
+    filterResults();
       
    });  
   //Add character button to the character filters.
