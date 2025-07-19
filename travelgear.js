@@ -144,29 +144,37 @@ function showFilters()
     console.log(filter.label+" Filter Selected"); 
     console.log("Filter list "+activeFilters.length);
       
-   });
+   });  
+  //Add character button to the character filters.
+  characterOptions.appendChild(filterButton);  
+ });
 
-  /*
-  if (filter.type == "price")
-  {
-   priceOptions.appendChild(filterButton);
-  }
-  if (filter.type == "character")
-  {
-   //characterOptions.appendChild(filterButton);
-  }
-  if (filter.type == "material")
-  {
-   materialFilters.appendChild(filterButton);
-  }*/
-   characterOptions.appendChild(filterButton);
-  
-  //filterTab.appendChild(filterButton);
+ //load the price filter buttons
+ filters.filters.pricerange.forEach(filter => {
+  console.log("Filter "+filter.label);
+  const filterButton = document.createElement("button");
+    filterButton.className = "filter-btn";
+    filterButton.setAttribute("data-label", filter.id);
+    filterButton.innerHTML = `${filter.label}`;
+
+   //Make the button do something when clicked
+  filterButton.addEventListener("click", () => {
+      filterButton.classList.toggle("active");
+    
+     activeFilters = Array.from(document.querySelectorAll('.filter-btn.active'))
+        .map(btn => btn.dataset.label);
+    console.log(filter.label+" Filter Selected"); 
+    console.log("Filter list "+activeFilters.length);
+      
+   });  
+  //Add character button to the character filters.
+  priceOptions.appendChild(filterButton);  
  });
  
-// filterTab.appendChild(priceOptions);
+ 
  filterTab.appendChild(characterOptions);
-// filterTab.appendChild(materialFilters);
+ filterTab.appendChild(priceOptions);
+ // filterTab.appendChild(materialFilters);
 
  const applyButton = document.getElementById("applyButton");
  applyButton.style.display = "block";
