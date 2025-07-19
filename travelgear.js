@@ -98,7 +98,7 @@ function showFilters()
   console.log("Character Filters..."+filter.id);
   const filterButton = document.createElement("button");
     filterButton.className = "filter-btn";
-    filterButton.setAttribute("data-label", filter.label);
+    filterButton.setAttribute("data-label", filter.id);
     filterButton.innerHTML = `${filter.label}`;
 
    //Make the button do something when clicked
@@ -107,7 +107,7 @@ function showFilters()
     
      activeCharacterFilters = Array.from(document.querySelectorAll('.filter-btn.active'))
         .map(btn => btn.dataset.label);
-    console.log(filter.label+" Filter Selected"); 
+    console.log(filter.id+" Filter Selected"); 
     console.log("Filter list "+characterFilters.length);
     filterResults();
  });
