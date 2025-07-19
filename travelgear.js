@@ -108,7 +108,7 @@ function showFilters()
      activeCharacterFilters = Array.from(document.querySelectorAll('.filter-btn.active'))
         .map(btn => btn.dataset.label);
     //console.log(filter.id+" Filter Selected"); 
-    console.log("Filter list "+activeCharacterFilters.length);
+    console.log("Number of character filters selected "+activeCharacterFilters.length);
     filterResults();
  });
   characterOptions.appendChild(filterButton);
@@ -173,15 +173,15 @@ function showFilters()
 //Function to apply the selected filter and refine the results. 
 function filterResults()
 {
-  console.log("Filter Results...");
+  console.log("Filtering Results...");
   //Use the filter array to go through the extra info and find the matching ASIN numbers,
   //Take that list of ASIN numbers and create the relevant cards from the travelgear data
-  activeCharacterFilters.forEach(character => {
-   console.log("Chracter Filter..."+character);
-
+  
    const matchingCases = additionalInfo.filter(suitcase =>
     activeCharacterFilters.length === 0 || activeCharacterFilters.every(match => suitcase.characters.includes(character))
   );
+
+  
 
    console.log("Matching Cases Length..."+matchingCases.length);
  /*
@@ -190,7 +190,7 @@ function filterResults()
     return;
   }*/
    
-  });
+
 
   
  
