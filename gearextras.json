@@ -34,7 +34,7 @@
   {
     "ASIN":"B0DG5X8RCT",
     "tbrating": 5,
-    "characters": "mickey",
+    "characters": ["mickey","minnie","donald"],
     "casetype": "kids",
     "pricefrom": 100,
     "notes": "No notes for this case"
