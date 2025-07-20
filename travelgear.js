@@ -141,7 +141,7 @@ function showFilters()
     
      typeFilters = Array.from(document.querySelectorAll('.filter-btn.active'))
         .map(btn => btn.dataset.label);
-    console.log(filter.label+" Filter Selected"); 
+    console.log(filter.id+" Filter Selected"); 
     filterResults(typeFilters);
       
    });  
@@ -168,7 +168,15 @@ function filterResults(options)
   console.log("Filtering Results...");
   //Use the filter array to go through the extra info and find the matching ASIN numbers,
   //Take that list of ASIN numbers and create the relevant cards from the travelgear data
-
+ 
+ //Check on filteredAdditionalInfo to confirm values held
+ filteredAdditionalInfo.forEach (item => {
+  console.log("ASIN "+item.ASIN);
+  console.log("TB Rating "+item.tbrating);
+  console.log("Characters "+item.characters);
+  console.log("Cast Type "+item.casetype);
+ });
+ 
  //Filter by character
   const matchingCases = filteredAdditionalInfo.filter(suitcase =>
     options.length === 0 || options.every(match => suitcase.characters.includes(match))
