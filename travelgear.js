@@ -164,17 +164,23 @@ function filterResults()
   console.log("Filtering Results...");
   //Use the filter array to go through the extra info and find the matching ASIN numbers,
   //Take that list of ASIN numbers and create the relevant cards from the travelgear data
-   
+
+ //Filter by character
   const matchingCases = additionalInfo.filter(suitcase =>
     characterFilters.length === 0 || characterFilters.every(match => suitcase.characters.includes(match))
   );
 
+  //Filter the character results by type
+  const matchingTypeCases = matchingCases.filter(suitcase => 
+    typeFilters.length === 0 || typeFilters.every(match => suitcase.casetype.includes(match))
+   );
+
   
-   let matchLength = matchingCases.length;
+   let matchingLength = matchingTypeCases.length;
    console.log("Matching Cases Length..."+matchLength);
    if (matchLength > 0)
    {
-     loadFilteredResults(matchingCases);
+     loadFilteredResults(matchingTypeCases);
    }
    else
    {
