@@ -176,7 +176,7 @@ function filterResults()
    );
 
   
-   let matchingLength = matchingTypeCases.length;
+   let matchLength = matchingTypeCases.length;
    console.log("Matching Cases Length..."+matchLength);
    if (matchLength > 0)
    {
