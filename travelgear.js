@@ -98,7 +98,7 @@ function showFilters()
      characterFilters = Array.from(document.querySelectorAll('.filter-btn.active'))
         .map(btn => btn.dataset.label);
     console.log(filter.label+" Filter Selected"); 
-    filterResults(characterFilters);
+    filterResults(characterFilters, "characters");
       
    });  
   //Add character button to the character filters.
@@ -120,7 +120,7 @@ function showFilters()
      priceFilters = Array.from(document.querySelectorAll('.filter-btn.active'))
         .map(btn => btn.dataset.label);
     console.log(filter.label+" Filter Selected"); 
-    filterResults(priceFilters);
+    filterResults(priceFilters, "price");
       
    });  
   //Add character button to the character filters.
@@ -142,7 +142,7 @@ function showFilters()
      typeFilters = Array.from(document.querySelectorAll('.filter-btn.active'))
         .map(btn => btn.dataset.label);
     console.log(filter.id+" Filter Selected"); 
-    filterResults(typeFilters);
+    filterResults(typeFilters, "type");
       
    });  
   //Add character button to the character filters.
@@ -163,7 +163,7 @@ function showFilters()
 }
 
 //Function to apply the selected filters and refine the results. 
-function filterResults(options)
+function filterResults(options, type)
 {
   console.log("Filtering Results...");
   //Use the filter array to go through the extra info and find the matching ASIN numbers,
@@ -178,9 +178,24 @@ function filterResults(options)
  });
  
  //Filter by character
-  const matchingCases = filteredAdditionalInfo.filter(suitcase =>
+ if (type === "characters")
+ {
+  console.log("Filtering by characters");
+ const matchingCases = filteredAdditionalInfo.filter(suitcase =>
     options.length === 0 || options.every(match => suitcase.characters.includes(match))
   );
+ }
+ else if (type === "type")
+ {
+  console.log("Filtering by type");
+ const matchingCases = filteredAdditionalInfo.filter(suitcase =>
+    options.length === 0 || options.every(match => suitcase.casetype.includes(match))
+  );
+ }
+ else
+ {
+  const matchingCases = [];
+ }
 
     
    let matchLength = matchingCases.length;
@@ -197,14 +212,7 @@ function filterResults(options)
      noMatchMessage.textContent = "No Matches Found";
      results.appendChild(noMatchMessage);
    }
- 
- /*
-  if (matchingCases.length === 0) {
-    container.innerHTML = "<p>No routes match your selected needs.</p>";
-    return;
-  }*/
-   
- 
+
 }
 
 function loadFilteredResults(matchingCases)
