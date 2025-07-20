@@ -199,7 +199,9 @@ function filterResults(options, type)
   console.log("No filter match");
  }
 
-    
+   //set filteredAdditionalInfo to matching cases value
+   filteredAdditionalInfo = matchingCases;
+ 
    let matchLength = matchingCases.length;
    console.log("Matching Cases Length..."+matchLength);
    if (matchLength > 0)
