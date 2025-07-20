@@ -176,25 +176,27 @@ function filterResults(options, type)
   console.log("Characters "+item.characters);
   console.log("Cast Type "+item.casetype);
  });
+
+ let matchingCases = [];
  
  //Filter by character
  if (type === "characters")
  {
   console.log("Filtering by characters");
- const matchingCases = filteredAdditionalInfo.filter(suitcase =>
+    matchingCases = filteredAdditionalInfo.filter(suitcase =>
     options.length === 0 || options.every(match => suitcase.characters.includes(match))
   );
  }
  else if (type === "type")
  {
   console.log("Filtering by type");
- const matchingCases = filteredAdditionalInfo.filter(suitcase =>
+    matchingCases = filteredAdditionalInfo.filter(suitcase =>
     options.length === 0 || options.every(match => suitcase.casetype.includes(match))
   );
  }
  else
  {
-  const matchingCases = [];
+  console.log("No filter match");
  }
 
     
