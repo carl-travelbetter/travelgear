@@ -48,38 +48,7 @@ fetch('filters.json')
  })
  .catch(error => console.error("Error loading filters data:", error));
 
-/*
-let characterFilters = [];
-fetch('characterfilters.json')
- .then (response => response.json())
- .then(data => {
-  characterFilters = data;
-  console.log("Character Filters Loaded...", characterFilters);
- })
- .catch(error => console.error("Error loading character filters:",error));
- */
 
-/*
-let priceFilters = [];
-fetch('pricefilters.json')
-.then(response => response.json())
-.then(data => {
- priceFilters = data;
- console.log("Price Filters Loaded...",priceFilters);
-})
-.catch(error => console.error("Error loading price filters:",error));
-*/
-
-/*
-let casetypeFilters = [];
-fetch('casetype.json')
-.then(response => response.json())
-.then(data => {
- casetypeFilters = data;
- console.log("Case Type Filters Loaded...",casetypeFilters);
-})
-.catch(error => console.error("Error loading type filters:",error));
-*/
 
 //Show the filter options and assign listeners
 function showFilters()
@@ -109,27 +78,6 @@ function showFilters()
  typeOptionsHeader.textContent = "Type";
  typeOptions.appendChild(typeOptionsHeader);
  
- //console.log("Character Filter Length "+characterFilters.length);
- /*
- characterFilters.forEach(filter => {
-  //console.log("Character Filters..."+filter.id);
-  const filterButton = document.createElement("button");
-    filterButton.className = "filter-btn";
-    filterButton.setAttribute("data-label", filter.id);
-    filterButton.innerHTML = `${filter.label}`;
-
-   //Make the button do something when clicked
-  filterButton.addEventListener("click", () => {
-      filterButton.classList.toggle("active");
-    
-     activeCharacterFilters = Array.from(document.querySelectorAll('.filter-btn.active'))
-        .map(btn => btn.dataset.label);
-    //console.log(filter.id+" Filter Selected"); 
-    console.log("Number of character filters selected "+activeCharacterFilters.length);
-    filterResults();
- });
-  characterOptions.appendChild(filterButton);
- });*/
 
  //load the character filter buttons
  filters.filters.characters.forEach(filter => {
@@ -210,20 +158,14 @@ function showFilters()
  
 }
 
-//Function to apply the selected filter and refine the results. 
+//Function to apply the selected filters and refine the results. 
 function filterResults()
 {
   console.log("Filtering Results...");
   //Use the filter array to go through the extra info and find the matching ASIN numbers,
   //Take that list of ASIN numbers and create the relevant cards from the travelgear data
-  
-   let count = 0;
-   characterFilters.forEach(item => {
-    count++;
-    console.log("Active Character Filter.."+item+" count"+count);
-   });
- 
-   const matchingCases = additionalInfo.filter(suitcase =>
+   
+  const matchingCases = additionalInfo.filter(suitcase =>
     characterFilters.length === 0 || characterFilters.every(match => suitcase.characters.includes(match))
   );
 
