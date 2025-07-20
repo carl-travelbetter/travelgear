@@ -7,6 +7,9 @@ let typeFilters = [];
 //Filtered List
 let filteredResults = [];
 
+//filteres additional information
+let filteredAdditionalInfo = [];
+
 //Load my favourite top three results ready for display
 let topThreeResults = [];
  fetch('topthree.json')
@@ -34,6 +37,7 @@ let additionalInfo = [];
   .then(response => response.json())
   .then(data => {
     additionalInfo = data;
+    filteredAdditionalInfo = additionalInfo;
     console.log("Additional Gear Data Loaded:", additionalInfo);
   })
  .catch(error => console.error("Error loading additional information file:", error));
@@ -94,7 +98,7 @@ function showFilters()
      characterFilters = Array.from(document.querySelectorAll('.filter-btn.active'))
         .map(btn => btn.dataset.label);
     console.log(filter.label+" Filter Selected"); 
-    filterResults();
+    filterResults(characterFilters);
       
    });  
   //Add character button to the character filters.
@@ -116,7 +120,7 @@ function showFilters()
      priceFilters = Array.from(document.querySelectorAll('.filter-btn.active'))
         .map(btn => btn.dataset.label);
     console.log(filter.label+" Filter Selected"); 
-    filterResults();
+    filterResults(priceFilters);
       
    });  
   //Add character button to the character filters.
@@ -138,7 +142,7 @@ function showFilters()
      typeFilters = Array.from(document.querySelectorAll('.filter-btn.active'))
         .map(btn => btn.dataset.label);
     console.log(filter.label+" Filter Selected"); 
-    filterResults();
+    filterResults(typeFilters);
       
    });  
   //Add character button to the character filters.
@@ -159,28 +163,23 @@ function showFilters()
 }
 
 //Function to apply the selected filters and refine the results. 
-function filterResults()
+function filterResults(options)
 {
   console.log("Filtering Results...");
   //Use the filter array to go through the extra info and find the matching ASIN numbers,
   //Take that list of ASIN numbers and create the relevant cards from the travelgear data
 
  //Filter by character
-  const matchingCases = additionalInfo.filter(suitcase =>
-    characterFilters.length === 0 || characterFilters.every(match => suitcase.characters.includes(match))
+  const matchingCases = filteredAdditionalInfo.filter(suitcase =>
+    options.length === 0 || options.every(match => suitcase.characters.includes(match))
   );
 
-  //Filter the character results by type
-  const matchingTypeCases = matchingCases.filter(suitcase => 
-    typeFilters.length === 0 || typeFilters.every(match => suitcase.casetype.includes(match))
-   );
-
-  
-   let matchLength = matchingTypeCases.length;
+    
+   let matchLength = matchingCases.length;
    console.log("Matching Cases Length..."+matchLength);
    if (matchLength > 0)
    {
-     loadFilteredResults(matchingTypeCases);
+     loadFilteredResults(matchingCases);
    }
    else
    {
@@ -279,6 +278,8 @@ function clearFilters()
   document.querySelectorAll('.filter-btn.active').forEach(btn => {
         btn.classList.remove('active');
         activeFilters = [];
+        filteredAdditionalInfo = additionalInfo;
+        loadTopThreeResults();
       });
 }
 
