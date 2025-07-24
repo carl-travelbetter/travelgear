@@ -1,7 +1,7 @@
 [
   {
     "ASIN":"B07N8CFJYF",
-    "tbrating": 4,
+    "tbrating": "4",
     "characters": "mickey",
     "casetype": "cabin",
     "pricefrom": 100,
@@ -9,7 +9,7 @@
   },
   {
     "ASIN":"B07ZZDLKFJ",
-    "tbrating": 3,
+    "tbrating": "3",
     "characters": "minnie",
     "casetype": "spinner",
     "pricefrom": 100,
@@ -17,7 +17,7 @@
   },
   {
     "ASIN":"B08BHH8MDM",
-    "tbrating": 3,
+    "tbrating": "3",
     "characters": "mickey",
     "casetype": "ride-on",
     "pricefrom": 150,
@@ -25,7 +25,7 @@
   },
   {
     "ASIN":"B071HVDF8S",
-    "tbrating": 3,
+    "tbrating": "3",
     "characters": "donald",
     "casetype": "spinner",
     "pricefrom": 200,
@@ -33,7 +33,7 @@
   },
   {
     "ASIN":"B0DG5X8RCT",
-    "tbrating": 5,
+    "tbrating": "5",
     "characters": "mickey",
     "casetype": "kids",
     "pricefrom": 100,
