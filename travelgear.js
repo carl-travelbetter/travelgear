@@ -176,6 +176,21 @@ function filterByCharacter()
 }
 
 
+//Applying the filters selected one by one after the apply button is pressed.
+function applyFilters()
+{
+  console.log("Apply Filters...");
+  //Create a list each time to then filter on if the filter options have been selected
+
+  const characterCases = additionalInfo.filter(suitcase =>
+       characterFilters.length === 0 || characterFilters.some(match => suitcase.characters.includes(match))
+   );
+   filteredAdditionalInfo = characterCases;
+   loadFilteredResults() 
+ 
+}
+
+
 //Function to apply the selected filters and refine the results. 
 function filterResults(options, type)
 {
