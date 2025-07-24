@@ -172,6 +172,7 @@ function filterByCharacter()
    filteredAdditionalInfo = matchingCases;
    let length = filteredAdditionalInfo.length;
    console.log("filter By character Filters Options length ==="+length);
+   loadFilteredResults()
 }
 
 
