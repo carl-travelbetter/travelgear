@@ -188,7 +188,21 @@ function applyFilters()
  
    //Update the global filtered list
    filteredAdditionalInfo = tbRatingsCases;
-   loadFilteredResults() 
+   console.log("Filtered Additional Info Length "+filteredAdditionalInfo.length);
+
+   if (filteredAdditionalInfo.length === 0)
+   {
+     results = document.getElementById("results");
+     results.innerHTML = "";
+     const noMatchMessage = document.createElement("p");
+     noMatchMessage.textContent = "No Matches Found - reset filters";
+     results.appendChild(noMatchMessage); 
+   }
+   else
+   {
+     loadFilteredResults();
+   }
+    
 }
 
 
