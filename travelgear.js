@@ -127,7 +127,9 @@ function showFilters()
   typeOptions.appendChild(filterButton);  
  });
 
+ //Load the TB ratings buttons
  filters.filters.tbrating.forEach(filter => {
+    const filterButton = document.createElement("button");
     filterButton.className = "filter-btn";
     filterButton.setAttribute("data-label", filter.id);
     filterButton.innerHTML = `${filter.label}`;
