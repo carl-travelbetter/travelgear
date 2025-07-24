@@ -97,9 +97,10 @@ function showFilters()
     
      characterFilters = Array.from(document.querySelectorAll('.filter-btn.active'))
         .map(btn => btn.dataset.label);
-    
+
+    //Removed any filter calls to use the apply button
     //filterResults(characterFilters, "characters");
-     filterByCharacter(); 
+    // filterByCharacter(); 
    });  
   //Add character button to the character filters.
   characterOptions.appendChild(filterButton);  
