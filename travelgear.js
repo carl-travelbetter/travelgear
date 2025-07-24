@@ -186,6 +186,7 @@ function filterResults(options, type)
     matchingCases = filteredAdditionalInfo.filter(suitcase =>
     options.length === 0 || options.every(match => suitcase.characters.includes(match))
   );
+  filteredAdditionalInfo = matchingCases;
  }
  else if (type === "type")
  {
@@ -193,20 +194,20 @@ function filterResults(options, type)
     matchingCases = filteredAdditionalInfo.filter(suitcase =>
     options.length === 0 || options.every(match => suitcase.casetype.includes(match))
   );
+  filteredAdditionalInfo = matchingCases;
  }
  else
  {
   console.log("No filter match");
  }
 
-   //set filteredAdditionalInfo to matching cases value
-   filteredAdditionalInfo = matchingCases;
+   
  
-   let matchLength = matchingCases.length;
-   console.log("Matching Cases Length..."+matchLength);
+   let filteredLength = filteredAdditionalInfo.length;
+   console.log("Filtered Cases Length..."+filteredLength);
    if (matchLength > 0)
    {
-     loadFilteredResults(matchingCases);
+     loadFilteredResults();
    }
    else
    {
@@ -219,22 +220,19 @@ function filterResults(options, type)
 
 }
 
-function loadFilteredResults(matchingCases)
+function loadFilteredResults()
 {
   console.log("Load Filtered Results...");
    results = document.getElementById("results");
   results.innerHTML = "";
 
-  matchingCases.forEach(match => {
+  filteredAdditionalInfo.forEach(match => {
    console.log("Matching Case ASIN = "+match.ASIN);
   });
- 
-  let arrayCheck = Array.isArray(itemResults.ItemsResult.Items);
-  console.log("Array Check on Item Results items = "+arrayCheck);
- 
+  
   //lookup a match in the main file and then create the card and append to the results
   filteredResults = itemResults.ItemsResult.Items.filter(item =>
-    matchingCases.length === 0 || matchingCases.some(match => item.ASIN.includes(match.ASIN))
+    filteredAdditionalInfo.length === 0 || filteredAdditionalInfo.some(match => item.ASIN.includes(match.ASIN))
   );
 
  console.log("Size of filtered results array = "+filteredResults.length);
