@@ -147,8 +147,8 @@ function showFilters()
  });
  
  filterTab.appendChild(characterOptions);
- filterTab.appendChild(priceOptions);
  filterTab.appendChild(typeOptions);
+ filterTab.appendChild(tbRatings);
  // filterTab.appendChild(materialFilters);
 
  const applyButton = document.getElementById("applyButton");
