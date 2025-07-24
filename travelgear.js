@@ -85,7 +85,7 @@ function showFilters()
 
  //load the character filter buttons
  filters.filters.characters.forEach(filter => {
-  console.log("Filter "+filter.label);
+  
   const filterButton = document.createElement("button");
     filterButton.className = "filter-btn";
     filterButton.setAttribute("data-label", filter.id);
@@ -97,7 +97,7 @@ function showFilters()
     
      characterFilters = Array.from(document.querySelectorAll('.filter-btn.active'))
         .map(btn => btn.dataset.label);
-    console.log(filter.label+" Filter Selected"); 
+    
     filterResults(characterFilters, "characters");
       
    });  
@@ -107,7 +107,7 @@ function showFilters()
 
  //load the price filter buttons
  filters.filters.pricerange.forEach(filter => {
-  console.log("Filter "+filter.label);
+ 
   const filterButton = document.createElement("button");
     filterButton.className = "filter-btn";
     filterButton.setAttribute("data-label", filter.id);
@@ -119,7 +119,7 @@ function showFilters()
     
      priceFilters = Array.from(document.querySelectorAll('.filter-btn.active'))
         .map(btn => btn.dataset.label);
-    console.log(filter.label+" Filter Selected"); 
+    
     filterResults(priceFilters, "price");
       
    });  
@@ -129,7 +129,7 @@ function showFilters()
 
  //load the type filter buttons
  filters.filters.type.forEach(filter => {
-  console.log("Filter "+filter.label);
+  
   const filterButton = document.createElement("button");
     filterButton.className = "filter-btn";
     filterButton.setAttribute("data-label", filter.id);
@@ -141,7 +141,7 @@ function showFilters()
     
      typeFilters = Array.from(document.querySelectorAll('.filter-btn.active'))
         .map(btn => btn.dataset.label);
-    console.log(filter.id+" Filter Selected"); 
+    
     filterResults(typeFilters, "type");
       
    });  
@@ -168,14 +168,9 @@ function filterResults(options, type)
   console.log("Filtering Results...");
   //Use the filter array to go through the extra info and find the matching ASIN numbers,
   //Take that list of ASIN numbers and create the relevant cards from the travelgear data
+  let filteredLength = filteredAdditionalInfo.length;
+   console.log("Filtered Cases Length When Filtered Selected..."+filteredLength);
  
- //Check on filteredAdditionalInfo to confirm values held
- filteredAdditionalInfo.forEach (item => {
-  console.log("ASIN "+item.ASIN);
-  console.log("TB Rating "+item.tbrating);
-  console.log("Characters "+item.characters);
-  console.log("Cast Type "+item.casetype);
- });
 
  let matchingCases = [];
  
@@ -187,6 +182,8 @@ function filterResults(options, type)
     options.length === 0 || options.every(match => suitcase.characters.includes(match))
   );
   filteredAdditionalInfo = matchingCases;
+  let length = filteredAdditionalInfo.length;
+   console.log("Filtered Cases After Character Filter..."+length);
  }
  else if (type === "type")
  {
@@ -195,6 +192,8 @@ function filterResults(options, type)
     options.length === 0 || options.every(match => suitcase.casetype.includes(match))
   );
   filteredAdditionalInfo = matchingCases;
+  let length = filteredAdditionalInfo.length;
+   console.log("Filtered Cases After Type Filter..."+length);
  }
  else
  {
@@ -203,8 +202,7 @@ function filterResults(options, type)
 
    
  
-   let filteredLength = filteredAdditionalInfo.length;
-   console.log("Filtered Cases Length..."+filteredLength);
+   
    if (matchLength > 0)
    {
      loadFilteredResults();
