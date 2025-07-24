@@ -3,6 +3,7 @@ let activeFilters = [];
 let characterFilters = [];
 let priceFilters = [];
 let typeFilters = [];
+let ratingsFilters = [];
 
 //Filtered List
 let filteredResults = [];
@@ -64,11 +65,11 @@ function showFilters()
  filterTitle.textContent = "Search Options";
  filterTab.appendChild(filterTitle);
  
- //Price Filters
- const priceOptions = document.createElement("div");
- const priceOptionsHeader = document.createElement("h3");
- priceOptionsHeader.textContent = "Price - Up to";
- priceOptions.appendChild(priceOptionsHeader);
+ //tb rating Filters
+ const tbRatings = document.createElement("div");
+ const tbRatingsHeader = document.createElement("h3");
+ tbRatingsHeader.textContent = "Travelbetter Rating";
+ tbRatings.appendChild(tbRatingsHeader);
 
  //Character Filters
  const characterOptions = document.createElement("div");
@@ -106,28 +107,6 @@ function showFilters()
   characterOptions.appendChild(filterButton);  
  });
 
- //load the price filter buttons
- filters.filters.pricerange.forEach(filter => {
- 
-  const filterButton = document.createElement("button");
-    filterButton.className = "filter-btn";
-    filterButton.setAttribute("data-label", filter.id);
-    filterButton.innerHTML = `${filter.label}`;
-
-   //Make the button do something when clicked
-  filterButton.addEventListener("click", () => {
-      filterButton.classList.toggle("active");
-    
-     priceFilters = Array.from(document.querySelectorAll('.filter-btn.active'))
-        .map(btn => btn.dataset.label);
-    
-    filterResults(priceFilters, "price");
-      
-   });  
-  //Add character button to the character filters.
-  priceOptions.appendChild(filterButton);  
- });
-
  //load the type filter buttons
  filters.filters.type.forEach(filter => {
   
@@ -143,13 +122,27 @@ function showFilters()
      typeFilters = Array.from(document.querySelectorAll('.filter-btn.active'))
         .map(btn => btn.dataset.label);
     
-    filterResults(typeFilters, "type");
-      
    });  
   //Add character button to the character filters.
   typeOptions.appendChild(filterButton);  
  });
- 
+
+ filters.filters.tbrating.forEach(filter => {
+    filterButton.className = "filter-btn";
+    filterButton.setAttribute("data-label", filter.id);
+    filterButton.innerHTML = `${filter.label}`;
+
+   //Make the button do something when clicked
+  filterButton.addEventListener("click", () => {
+      filterButton.classList.toggle("active");
+    
+     ratingsFilters = Array.from(document.querySelectorAll('.filter-btn.active'))
+        .map(btn => btn.dataset.label);
+    
+   });  
+  //Add character button to the character filters.
+  tbRatings.appendChild(filterButton);  
+ });
  
  filterTab.appendChild(characterOptions);
  filterTab.appendChild(priceOptions);
@@ -161,19 +154,6 @@ function showFilters()
  const clearButton = document.getElementById("clearButton");
  clearButton.style.display = "block";
  
-}
-
-//Possibly temporary function to try to add multiple character filters e.g. mickey and minnie
-function filterByCharacter()
-{
-   console.log("Filter by Characters");
-   const matchingCases = additionalInfo.filter(suitcase =>
-       characterFilters.length === 0 || characterFilters.some(match => suitcase.characters.includes(match))
-   );
-   filteredAdditionalInfo = matchingCases;
-   let length = filteredAdditionalInfo.length;
-   console.log("filter By character Filters Options length ==="+length);
-   loadFilteredResults()
 }
 
 
@@ -191,67 +171,19 @@ function applyFilters()
    const typeCases = characterCases.filter(suitcase =>
       typeFilters.length === 0 || typeFilters.some(match => suitcase.casetype.includes(match))
     );
+
+   //Now take the results of the type filter and apply the tb ratings filters
+   const tbRatingsCases = typeCases.filter(suitcase =>
+     ratingsFilters.length === 0 || ratingsFilters.some(match => suitcase.tbrating.includes(match))
+    );
+ 
    //Update the global filtered list
-   filteredAdditionalInfo = typeCases;
+   filteredAdditionalInfo = tbRatingCases;
    loadFilteredResults() 
 }
 
 
-//Function to apply the selected filters and refine the results. 
-function filterResults(options, type)
-{
-  console.log("Filtering Results...");
-  //Use the filter array to go through the extra info and find the matching ASIN numbers,
-  //Take that list of ASIN numbers and create the relevant cards from the travelgear data
-  let filteredLength = filteredAdditionalInfo.length;
-   console.log("Filtered Cases Length When Filtered Selected..."+filteredLength);
- 
 
- let matchingCases = [];
- 
- //Filter by character
- if (type === "characters")
- {
-  console.log("Filtering by characters");
-    matchingCases = filteredAdditionalInfo.filter(suitcase =>
-    options.length === 0 || options.every(match => suitcase.characters.includes(match))
-  );
-  filteredAdditionalInfo = matchingCases;
-  let length = filteredAdditionalInfo.length;
-   console.log("Filtered Cases After Character Filter..."+length);
- }
- else if (type === "type")
- {
-  console.log("Filtering by type");
-    matchingCases = filteredAdditionalInfo.filter(suitcase =>
-    options.length === 0 || options.every(match => suitcase.casetype.includes(match))
-  );
-  filteredAdditionalInfo = matchingCases;
-  let length = filteredAdditionalInfo.length;
-   console.log("Filtered Cases After Type Filter..."+length);
- }
- else
- {
-  console.log("No filter match");
- }
-
-   
- let matchLength = filteredAdditionalInfo.length;
-    
-   if (matchLength > 0)
-   {
-     loadFilteredResults();
-   }
-   else
-   {
-     results = document.getElementById("results");
-     results.innerHTML = "";
-     const noMatchMessage = document.createElement("p");
-     noMatchMessage.textContent = "No Matches Found";
-     results.appendChild(noMatchMessage);
-   }
-
-}
 
 function loadFilteredResults()
 {
