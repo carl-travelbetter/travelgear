@@ -12,6 +12,10 @@
      {
        "id":"donald",
        "label":"Donald Duck"
+     },
+     {
+       "id":"goofy",
+       "label":"Goofy"
      }
    ],
   "pricerange": [
