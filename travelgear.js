@@ -186,9 +186,14 @@ function applyFilters()
   const characterCases = additionalInfo.filter(suitcase =>
        characterFilters.length === 0 || characterFilters.some(match => suitcase.characters.includes(match))
    );
-   filteredAdditionalInfo = characterCases;
+
+   //Now take the results of the character cases filter and apply the type filters
+   const typeCases = characterCases.filter(suitcase =>
+      typeFilters.length === 0 || typeFilters.some(match => suitcase.casetype.includes(match))
+    );
+   //Update the global filtered list
+   filteredAdditionalInfo = typeCases;
    loadFilteredResults() 
- 
 }
 
 
