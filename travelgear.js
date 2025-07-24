@@ -262,10 +262,14 @@ function clearFilters()
   console.log("clear Filters...");
   document.querySelectorAll('.filter-btn.active').forEach(btn => {
         btn.classList.remove('active');
-        activeFilters = [];
-        filteredAdditionalInfo = additionalInfo;
-        loadTopThreeResults();
+        
       });
+ 
+        characterFilters = [];
+        typeFilters = [];
+        ratingsFilters = [];
+        filteredAdditionalInfo = additionalInfo;
+        loadFilteredResults();
 }
 
 
