@@ -98,8 +98,8 @@ function showFilters()
      characterFilters = Array.from(document.querySelectorAll('.filter-btn.active'))
         .map(btn => btn.dataset.label);
     
-    filterResults(characterFilters, "characters");
-      
+    //filterResults(characterFilters, "characters");
+     filterByCharacter(); 
    });  
   //Add character button to the character filters.
   characterOptions.appendChild(filterButton);  
@@ -161,6 +161,19 @@ function showFilters()
  clearButton.style.display = "block";
  
 }
+
+//Possibly temporary function to try to add multiple character filters e.g. mickey and minnie
+function filterByCharacter()
+{
+   console.log("Filter by Characters");
+   const matchingCases = additionalInfo.filter(suitcase =>
+       characterFilters.length === 0 || characterFilters.some(match => suitcase.characters.includes(match))
+   );
+   filteredAdditionalInfo = matchingCases;
+   let length = filteredAdditionalInfo.length;
+   console.log("filter By character Filters Options length ==="+length);
+}
+
 
 //Function to apply the selected filters and refine the results. 
 function filterResults(options, type)
