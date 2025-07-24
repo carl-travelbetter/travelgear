@@ -180,7 +180,7 @@ function applyFilters()
     );
  
    //Update the global filtered list
-   filteredAdditionalInfo = tbRatingCases;
+   filteredAdditionalInfo = tbRatingsCases;
    loadFilteredResults() 
 }
 
