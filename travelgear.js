@@ -201,8 +201,8 @@ function filterResults(options, type)
  }
 
    
- 
-   
+ let matchLength = filteredAdditionalInfo.length;
+    
    if (matchLength > 0)
    {
      loadFilteredResults();
