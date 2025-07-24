@@ -164,20 +164,27 @@ function applyFilters()
 {
   console.log("Apply Filters...");
   //Create a list each time to then filter on if the filter options have been selected
-
+  console.log("Additional Info length "+additionalInfo.length);
+ 
   const characterCases = additionalInfo.filter(suitcase =>
        characterFilters.length === 0 || characterFilters.some(match => suitcase.characters.includes(match))
    );
+
+  console.log("Character Cases Length "+characterCases.length);
 
    //Now take the results of the character cases filter and apply the type filters
    const typeCases = characterCases.filter(suitcase =>
       typeFilters.length === 0 || typeFilters.some(match => suitcase.casetype.includes(match))
     );
 
+   console.log("Type Cases Length "+typeCases.length);
+
    //Now take the results of the type filter and apply the tb ratings filters
    const tbRatingsCases = typeCases.filter(suitcase =>
      ratingsFilters.length === 0 || ratingsFilters.some(match => suitcase.tbrating.includes(match))
     );
+
+   console.log("TB Ratings Cases Length "+typeCases.length);
  
    //Update the global filtered list
    filteredAdditionalInfo = tbRatingsCases;
@@ -193,9 +200,7 @@ function loadFilteredResults()
    results = document.getElementById("results");
   results.innerHTML = "";
 
-  filteredAdditionalInfo.forEach(match => {
-   console.log("Matching Case ASIN = "+match.ASIN);
-  });
+ 
   
   //lookup a match in the main file and then create the card and append to the results
   filteredResults = itemResults.ItemsResult.Items.filter(item =>
@@ -236,7 +241,7 @@ function loadFilteredResults()
        console.log("Additional ASIN Lookup "+asinLookup);
        if (asinLookup == item.ASIN)
        {
-         console.log("***Match Found***");
+         //console.log("***Match Found***");
          const infoHeader = document.createElement("h2");
          infoHeader.textContent = "Additional Information";
          infoHeader.className = "product-info";
@@ -248,7 +253,7 @@ function loadFilteredResults()
        }
        else
        {
-         console.log("No Match Found");
+        // console.log("No Match Found");
        }
        
      });
