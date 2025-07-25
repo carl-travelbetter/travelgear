@@ -207,7 +207,7 @@ function applyFilters()
 
 
 
-
+//Refresh the results based on the latest set of filters selected
 function loadFilteredResults()
 {
   console.log("Load Filtered Results...");
@@ -221,7 +221,7 @@ function loadFilteredResults()
     filteredAdditionalInfo.length === 0 || filteredAdditionalInfo.some(match => item.ASIN.includes(match.ASIN))
   );
 
- console.log("Size of filtered results array = "+filteredResults.length);
+ 
  
   filteredResults.forEach(item => {
     const gearCard = document.createElement("div");
@@ -252,7 +252,7 @@ function loadFilteredResults()
      //Add additional information, if found
      additionalInfo.forEach(entry => {
        const asinLookup = entry.ASIN;
-       console.log("Additional ASIN Lookup "+asinLookup);
+       
        if (asinLookup == item.ASIN)
        {
          //console.log("***Match Found***");
@@ -276,6 +276,7 @@ function loadFilteredResults()
    });
 }
 
+//Clear all filters and reload all results
 function clearFilters()
 {
   console.log("clear Filters...");
@@ -291,7 +292,7 @@ function clearFilters()
         loadFilteredResults();
 }
 
-
+//Return the top three results as selected by Travelbetter
 function loadTopThreeResults()
 {
   console.log("Load Top Three Results...");
@@ -327,10 +328,10 @@ function loadTopThreeResults()
      //Add additional information, if found
      additionalInfo.forEach(entry => {
        const asinLookup = entry.ASIN;
-       console.log("Additional ASIN Lookup "+asinLookup);
+       
        if (asinLookup == item.ASIN)
        {
-         console.log("***Match Found***");
+         
          const infoHeader = document.createElement("h2");
          infoHeader.textContent = "Additional Information";
          infoHeader.className = "product-info";
@@ -342,7 +343,7 @@ function loadTopThreeResults()
        }
        else
        {
-         console.log("No Match Found");
+         //console.log("No Match Found");
        }
        
      });
@@ -352,7 +353,7 @@ function loadTopThreeResults()
  
 }
 
-
+//Return all results in the main items list (show all)
 function getGear()
 {
   console.log("Get Gear...");
@@ -388,10 +389,10 @@ function getGear()
      //Add additional information, if found
      additionalInfo.forEach(entry => {
        const asinLookup = entry.ASIN;
-       console.log("Additional ASIN Lookup "+asinLookup);
+       
        if (asinLookup == item.ASIN)
        {
-         console.log("***Match Found***");
+         
          const infoHeader = document.createElement("h2");
          infoHeader.textContent = "Additional Information";
          gearCard.appendChild(infoHeader);
@@ -401,7 +402,7 @@ function getGear()
        }
        else
        {
-         console.log("No Match Found");
+         //console.log("No Match Found");
        }
        
      });
