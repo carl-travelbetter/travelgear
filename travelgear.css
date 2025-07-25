@@ -33,6 +33,9 @@ body {
 }
 
 .searchButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #004080;
   color: white;
   border: none;
