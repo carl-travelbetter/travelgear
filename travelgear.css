@@ -116,6 +116,16 @@ body {
     border-radius: 12px;
     max-width:800px;
 }
+
+.filterbar {
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+    padding:0.5rem;
+    background-color: #dcf0fc;
+    border-radius: 12px;
+    max-width:800px;
+}
       
 
 
