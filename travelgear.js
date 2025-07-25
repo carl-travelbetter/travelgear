@@ -195,6 +195,7 @@ function applyFilters()
      results = document.getElementById("results");
      results.innerHTML = "";
      const noMatchMessage = document.createElement("p");
+     noMatchMessage.className = "nomatch";
      noMatchMessage.textContent = "No Matches Found - reset filters";
      results.appendChild(noMatchMessage); 
    }
@@ -246,7 +247,7 @@ function loadFilteredResults()
      gearCard.appendChild(buyItLink);
      const price = document.createElement("p");
      price.className = "product-info";
-     price.textContent = "Price "+item.Offers.Listings[0].Price.DisplayAmount;
+     price.textContent = "Indicative Price* "+item.Offers.Listings[0].Price.DisplayAmount;
      gearCard.appendChild(price);
   
      //Add additional information, if found
