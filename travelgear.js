@@ -160,7 +160,7 @@ function loadFilters()
 //Function to allow users to hide the filter options
 function showFilters()
 {
-   console.log("Hiding Filters");
+   console.log("Showing Filters");
    const filterTab = document.getElementById("filters");
    filterTab.style.display = "block";
 
