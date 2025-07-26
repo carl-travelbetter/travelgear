@@ -120,6 +120,7 @@ body {
 .controlbar {
     margin-left:auto;
     margin-right:auto;
+    margin-top:0.5em;
     padding:0.5rem;
     background-color: #dcf0fc;
     border-radius: 12px;
