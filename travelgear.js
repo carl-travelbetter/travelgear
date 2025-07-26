@@ -153,12 +153,7 @@ function loadFilters()
  filterTab.appendChild(tbRatings);
  // filterTab.appendChild(materialFilters);
 
- const filterButtonBar = document.getElementById("controls");
- filterButtonBar.style.display = "block";
- const applyButton = document.getElementById("applyButton");
- applyButton.style.display = "block";
- const clearButton = document.getElementById("clearButton");
- clearButton.style.display = "block";
+ 
  
 }
 
@@ -168,6 +163,13 @@ function showFilters()
    console.log("Hiding Filters");
    const filterTab = document.getElementById("filters");
    filterTab.style.display = "block";
+
+   const filterButtonBar = document.getElementById("controls");
+  filterButtonBar.style.display = "block";
+  const applyButton = document.getElementById("applyButton");
+  applyButton.style.display = "block";
+  const clearButton = document.getElementById("clearButton");
+  clearButton.style.display = "block";
 }
 
 //Function to allow users to hide the filter options
