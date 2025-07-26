@@ -151,7 +151,7 @@ function showFilters()
  filterTab.appendChild(tbRatings);
  // filterTab.appendChild(materialFilters);
 
- const filterButtonBar = document.getElementById("controls";
+ const filterButtonBar = document.getElementById("controls");
  filterButtonBar.style.display = "block";
  const applyButton = document.getElementById("applyButton");
  applyButton.style.display = "block";
