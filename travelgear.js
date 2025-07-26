@@ -50,17 +50,19 @@ fetch('filters.json')
  .then(data => {
    filters = data;
    console.log("Filters Loaded...", filters);
+   loadFilters();
  })
  .catch(error => console.error("Error loading filters data:", error));
 
 
-
 //Show the filter options and assign listeners
-function showFilters()
+function loadFilters()
 {
  //console.log("Showing Filters...");
  const filterTab = document.getElementById("filters");
- filterTab.innerHTML = "";
+ 
+ //Commented out this option for now to enable the fitler options to remain in place when hiding the options
+ //filterTab.innerHTML = "";
  const filterTitle = document.createElement("h2");
  filterTitle.textContent = "Search Options";
  filterTab.appendChild(filterTitle);
@@ -158,6 +160,22 @@ function showFilters()
  const clearButton = document.getElementById("clearButton");
  clearButton.style.display = "block";
  
+}
+
+//Function to allow users to hide the filter options
+function showFilters()
+{
+   console.log("Hiding Filters");
+   const filterTab = document.getElementById("filters");
+   filterTab.style.display = "block";
+}
+
+//Function to allow users to hide the filter options
+function hideFilters()
+{
+   console.log("Hiding Filters");
+   const filterTab = document.getElementById("filters");
+   filterTab.style.display = "hidden";
 }
 
 
