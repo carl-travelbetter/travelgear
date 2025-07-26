@@ -161,7 +161,13 @@ function loadFilters()
 function showFilters()
 {
    console.log("Showing Filters");
-   const filterTab = document.getElementById("filters");
+   document.getElementById("filters").hidden = false;
+   document.getElementById("controls").hidden = false;
+ 
+   document.getElementById("applyButton").hidden = false;
+   document.getElementById("clearButton").hidden = false;
+   document.getElementById("hideFilters").hidden = false;
+  /* const filterTab = document.getElementById("filters");
    filterTab.style.display = "block";
 
    const filterButtonBar = document.getElementById("controls");
@@ -171,14 +177,14 @@ function showFilters()
   const clearButton = document.getElementById("clearButton");
   clearButton.style.display = "block";
   const hideButton = document.getElementById("hideFilters");
-  hideButton.style.display = "block";
+  hideButton.style.display = "block";*/
 }
 
 //Function to allow users to hide the filter options
 function hideFilters()
 {
    console.log("Hiding Filters");
-   const filterTab = document.getElementById("filters");
+  /* const filterTab = document.getElementById("filters");
    filterTab.style.display = "none";
 
   const filterButtonBar = document.getElementById("controls");
@@ -188,7 +194,9 @@ function hideFilters()
   const clearButton = document.getElementById("clearButton");
   clearButton.style.display = "none";
   const hideButton = document.getElementById("hideFilters");
-  hideButton.style.display = "none";
+  hideButton.style.display = "none";*/
+  document.getElementById("filters").hidden = true;
+  document.getElementById("controls").hidden = true;
 }
 
 
