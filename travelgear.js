@@ -179,16 +179,16 @@ function hideFilters()
 {
    console.log("Hiding Filters");
    const filterTab = document.getElementById("filters");
-   filterTab.style.display = "hidden";
+   filterTab.style.display = "none";
 
   const filterButtonBar = document.getElementById("controls");
-  filterButtonBar.style.display = "hidden";
+  filterButtonBar.style.display = "none";
   const applyButton = document.getElementById("applyButton");
-  applyButton.style.display = "hidden";
+  applyButton.style.display = "none";
   const clearButton = document.getElementById("clearButton");
-  clearButton.style.display = "hidden";
+  clearButton.style.display = "none";
   const hideButton = document.getElementById("hideFilters");
-  hideButton.style.display = "hidden";
+  hideButton.style.display = "none";
 }
 
 
