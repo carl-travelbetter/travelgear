@@ -170,6 +170,8 @@ function showFilters()
   applyButton.style.display = "block";
   const clearButton = document.getElementById("clearButton");
   clearButton.style.display = "block";
+  const hideButton = document.getElementById("hideFilters");
+  hideButton.style.display = "block";
 }
 
 //Function to allow users to hide the filter options
@@ -178,6 +180,15 @@ function hideFilters()
    console.log("Hiding Filters");
    const filterTab = document.getElementById("filters");
    filterTab.style.display = "hidden";
+
+  const filterButtonBar = document.getElementById("controls");
+  filterButtonBar.style.display = "hidden";
+  const applyButton = document.getElementById("applyButton");
+  applyButton.style.display = "hidden";
+  const clearButton = document.getElementById("clearButton");
+  clearButton.style.display = "hidden";
+  const hideButton = document.getElementById("hideFilters");
+  hideButton.style.display = "hidden";
 }
 
 
