@@ -238,7 +238,8 @@ function applyFilters()
      const noMatchMessage = document.createElement("p");
      noMatchMessage.className = "nomatch";
      noMatchMessage.textContent = "No Matches Found - reset filters";
-     results.appendChild(noMatchMessage); 
+     results.appendChild(noMatchMessage);
+     hideFilters();
    }
    else
    {
